@@ -46,42 +46,34 @@ namespace ConsoleApp1
             {
                 case 1:
                     HelloWorld();
-                    Console.ReadKey();
                     List();
                     break;
                 case 2:
                     BasicMath();
-                    Console.ReadKey();
                     List();
                     break;
                 case 3:
                     ConvertTemperature();
-                    Console.ReadKey();
                     List();
                     break;
                 case 4:
                     TinhTrungBinhBaSo();
-                    Console.ReadKey();
                     List();
                     break;
                 case 5:
                     CanBatVaBinhPhuong();
-                    Console.ReadKey();
                     List();
                     break;
                 case 6:
                     ChuViVaDienTichHinhChuNhat();
-                    Console.ReadKey();
                     List();
                     break;
                 case 7:
                     ChuViVaDienTichHinhVuong();
-                    Console.ReadKey();
                     List();
                     break;
                 case 8:
                     ChuViVaDienTichHinhTamGiac();
-                    Console.ReadKey();
                     List();
                     break;  
                 case 9:
@@ -90,7 +82,6 @@ namespace ConsoleApp1
                     break;
                 case 10:
                     TheTichVaDienTichHinhCau();
-                    Console.ReadKey();
                     List();
                     break;
                 default:
@@ -102,6 +93,7 @@ namespace ConsoleApp1
         public static void HelloWorld()
         {
             Console.Write("Hello World");
+            Console.ReadKey();
         }
         public static void BasicMath()
         {
@@ -123,6 +115,7 @@ namespace ConsoleApp1
             Console.WriteLine("Hieu Cua a * b = {0}", tich);
             thuong = a / b;
             Console.WriteLine("Thuong Cua a / b = {0}", thuong);
+            Console.ReadKey();
         }
         public static void ConvertTemperature()
         {
@@ -134,6 +127,7 @@ namespace ConsoleApp1
             Console.WriteLine("Độ Celcius Là :{0} C", Celcius);
             Console.WriteLine("Độ Fahrenheit Là :{0} F", Fahrenheit);
             Console.WriteLine("Do Kelvin Là :{0} K", Kelvin);
+            Console.ReadKey();
         }
         public static void TinhTrungBinhBaSo()
         {
@@ -148,6 +142,7 @@ namespace ConsoleApp1
             c = Convert.ToInt32(Console.ReadLine());
             int Trungbinh = (a + b + c) / 3;
             Console.WriteLine("Trung binh Cộng Của Ba Số A = {0}, B= {1}, C = {2} la :{3}",a,b,c,Trungbinh);
+            Console.ReadKey();
         }
         public static void CanBatVaBinhPhuong()
         {
@@ -161,6 +156,7 @@ namespace ConsoleApp1
             Console.WriteLine("Binh Phương Của A={0} Là :{1}", a, pow);
             double sqrt = Math.Sqrt(a);
             Console.WriteLine("Căn Bật 2 Của A={0} Là :{1}", a, sqrt);
+            Console.ReadKey();
         }
         public static void ChuViVaDienTichHinhChuNhat()
         {
@@ -180,6 +176,7 @@ namespace ConsoleApp1
             int dientichhinhchunhat;
             dientichhinhchunhat = chieudai * chieurong;
             Console.WriteLine("Diện Tích Hình Chữ Nhật Là :{0}", dientichhinhchunhat);
+            Console.ReadKey();
         }
         public static void ChuViVaDienTichHinhVuong()
         {
@@ -190,6 +187,7 @@ namespace ConsoleApp1
             Console.WriteLine("Chu Vi Hinh Vuong la :{0}", chuvihinhvuong);
             int dientichhinhvuong = canh * canh;
             Console.WriteLine("Dien Tich Hinh Vuong la :{0}", dientichhinhvuong);
+            Console.ReadKey();
         }
         public static void ChuViVaDienTichHinhTamGiac()
         {
@@ -207,6 +205,7 @@ namespace ConsoleApp1
             Double p = (canha + canhb + canhc) / 2;
             double dientichhinhtamgiac = Math.Sqrt(p * (p - canha) * (p - canhb) * (p - canhc));
             Console.WriteLine("Dien Tich Hinh Tam Giac la :{0}", dientichhinhtamgiac);
+            Console.ReadKey();
         }
         public static void ChuViVaDienTichHinhTron()
         {
@@ -230,6 +229,7 @@ namespace ConsoleApp1
             Console.WriteLine("Dien Tich Mat Cau la :{0}", dientichmatcau);
             double thetichhinhcau = (4 / 3) * r * Math.Pow(bankinhhinhcau, 3);
             Console.WriteLine("The Tich Khoi Hinh Cau la :{0}", thetichhinhcau);
+            Console.ReadKey();
         }
     }
 }
