@@ -51,57 +51,46 @@ namespace ConsoleApp2
             {
                 case 1:                
                     SoSanhHaiSoNguyen();
-                    Console.ReadKey();
                     List();
                     break;
                 case 2:
                     SoSanhBaSoNguyen();
-                    Console.ReadKey();
                     List();
                     break;
                 case 3:            
                     KiemTraNguyenAmNguyenDuong();
-                    Console.ReadKey();
                     List();
                     break;
                 case 4:
                     KiemtraSoChanLe();
-                    Console.ReadKey();
                     List();
                     break;
                 case 5:
                     KiemTraNamNhuan();
-                    Console.ReadKey();
                     List();
                     break;
                 case 6:         
                     XuatChuCuaThangNhap();
-                    Console.ReadKey();
                     List();
                     break;
                 case 7:
                     XuatChuCuaNgayNhap();
-                    Console.ReadKey();
                     List();
                     break;
                 case 8:
                     TinhTrungBinhVaXepLoai5Mon();
-                    Console.ReadKey();
                     List();
                     break;
                 case 9:
                     GiaiPhuongTrinhBat1();
-                    Console.ReadKey();
                     List();
                     break;
                 case 10:
                     GiaiPhuongTrinhBat2();
-                    Console.ReadKey();
                     List();
                     break;
                 case 11:
                     GiaiPhuongTrinhBat3();
-                    Console.ReadKey();
                     List();
                     break;
                 case 12:
@@ -135,6 +124,7 @@ namespace ConsoleApp2
             {
                 Console.WriteLine("a={0} Bé Hơn b={1}", a, b);
             }
+            Console.ReadKey();
         }
         public static void SoSanhBaSoNguyen()
         {
@@ -167,6 +157,7 @@ namespace ConsoleApp2
                 min = c;
             }
             Console.WriteLine("Số Bé Nhất Là {0} ", min);
+            Console.ReadKey();
         }
         public static void KiemTraNguyenAmNguyenDuong()
         {
@@ -185,6 +176,7 @@ namespace ConsoleApp2
             {
                 Console.WriteLine("A = {0} Là Số Nguyên Dương", a);
             }
+            Console.ReadKey();
         }
         public static void KiemtraSoChanLe()
         {
@@ -199,6 +191,7 @@ namespace ConsoleApp2
             {
                 Console.WriteLine("A = {0} Là Số Lẻ", a);
             }
+            Console.ReadKey();
         }
         public static void KiemTraNamNhuan()
         {
@@ -234,6 +227,7 @@ namespace ConsoleApp2
                     }
                 }
             }
+            Console.ReadKey();
         }
         public static void XuatChuCuaThangNhap()
         {
@@ -302,6 +296,7 @@ namespace ConsoleApp2
                     Console.ReadKey();
                     break;
             }
+            Console.ReadKey();
         }
         public static void XuatChuCuaNgayNhap()
         {
@@ -346,6 +341,7 @@ namespace ConsoleApp2
                     Console.ReadKey();
                     break;
             }
+            Console.ReadKey();
         }
         public static void TinhTrungBinhVaXepLoai5Mon()
         {
@@ -409,6 +405,7 @@ namespace ConsoleApp2
                     }
                 }
             }
+            Console.ReadKey();
         }
         public static void GiaiPhuongTrinhBat1()
         {
@@ -426,6 +423,7 @@ namespace ConsoleApp2
                 float x = -b / a;
                 Console.WriteLine("{0}x + {1} = 0 \n=> x = {2}", a, b, x);
             }
+            Console.ReadKey();
         }
         public static void GiaiPhuongTrinhBat2()
         {
@@ -460,6 +458,7 @@ namespace ConsoleApp2
                     Console.Write("x1=x2={0}", nghiemkep);
                 }
             }
+            Console.ReadKey();
         }
         public static void GiaiPhuongTrinhBat3()
         {
@@ -474,7 +473,10 @@ namespace ConsoleApp2
             Console.Write("Nhập Vào Hệ Số C:");
             c = Convert.ToInt32(Console.ReadLine());
             Console.Write("Nhập Vào Hệ Số D:");
-            d = Convert.ToInt32(Console.ReadLine());  
+            d = Convert.ToInt32(Console.ReadLine());
+           double e= a + b + c + d;
+            Console.WriteLine("{0}", e);
+            Console.ReadKey();
         }
         public static void BangCuuChuong()
         {
@@ -493,6 +495,7 @@ namespace ConsoleApp2
                 Console.WriteLine();
                 a++;
             } while (a <= 10);
+            Console.ReadKey();
         }
     }
 }
