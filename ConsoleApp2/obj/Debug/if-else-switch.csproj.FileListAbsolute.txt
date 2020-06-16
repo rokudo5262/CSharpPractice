@@ -1,0 +1,7 @@
+F:\Learning C#\CSharpPractice\ConsoleApp2\bin\Debug\ConsoleApp2.exe.config
+F:\Learning C#\CSharpPractice\ConsoleApp2\bin\Debug\ConsoleApp2.exe
+F:\Learning C#\CSharpPractice\ConsoleApp2\bin\Debug\ConsoleApp2.pdb
+F:\Learning C#\CSharpPractice\ConsoleApp2\obj\Debug\if-else-switch.csprojAssemblyReference.cache
+F:\Learning C#\CSharpPractice\ConsoleApp2\obj\Debug\if-else-switch.csproj.CoreCompileInputs.cache
+F:\Learning C#\CSharpPractice\ConsoleApp2\obj\Debug\ConsoleApp2.exe
+F:\Learning C#\CSharpPractice\ConsoleApp2\obj\Debug\ConsoleApp2.pdb

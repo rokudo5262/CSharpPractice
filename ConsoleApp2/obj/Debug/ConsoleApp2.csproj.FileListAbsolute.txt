@@ -1,0 +1,14 @@
+F:\Practice C#\Week1\ConsoleApp1\ConsoleApp2\bin\Debug\ConsoleApp2.exe.config
+F:\Practice C#\Week1\ConsoleApp1\ConsoleApp2\bin\Debug\ConsoleApp2.exe
+F:\Practice C#\Week1\ConsoleApp1\ConsoleApp2\bin\Debug\ConsoleApp2.pdb
+F:\Practice C#\Week1\ConsoleApp1\ConsoleApp2\obj\Debug\ConsoleApp2.csprojAssemblyReference.cache
+F:\Practice C#\Week1\ConsoleApp1\ConsoleApp2\obj\Debug\ConsoleApp2.csproj.CoreCompileInputs.cache
+F:\Practice C#\Week1\ConsoleApp1\ConsoleApp2\obj\Debug\ConsoleApp2.exe
+F:\Practice C#\Week1\ConsoleApp1\ConsoleApp2\obj\Debug\ConsoleApp2.pdb
+F:\Learning C#\Week1\ConsoleApp1\ConsoleApp2\bin\Debug\ConsoleApp2.exe.config
+F:\Learning C#\Week1\ConsoleApp1\ConsoleApp2\bin\Debug\ConsoleApp2.exe
+F:\Learning C#\Week1\ConsoleApp1\ConsoleApp2\bin\Debug\ConsoleApp2.pdb
+F:\Learning C#\Week1\ConsoleApp1\ConsoleApp2\obj\Debug\ConsoleApp2.csprojAssemblyReference.cache
+F:\Learning C#\Week1\ConsoleApp1\ConsoleApp2\obj\Debug\ConsoleApp2.csproj.CoreCompileInputs.cache
+F:\Learning C#\Week1\ConsoleApp1\ConsoleApp2\obj\Debug\ConsoleApp2.exe
+F:\Learning C#\Week1\ConsoleApp1\ConsoleApp2\obj\Debug\ConsoleApp2.pdb

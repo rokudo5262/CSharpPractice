@@ -1,0 +1,7 @@
+F:\Practice C#\Week1\ConsoleApp1\ConsoleApp1\bin\Debug\ConsoleApp1.exe.config
+F:\Practice C#\Week1\ConsoleApp1\ConsoleApp1\bin\Debug\ConsoleApp1.exe
+F:\Practice C#\Week1\ConsoleApp1\ConsoleApp1\bin\Debug\ConsoleApp1.pdb
+F:\Practice C#\Week1\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.csprojAssemblyReference.cache
+F:\Practice C#\Week1\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.CoreCompileInputs.cache
+F:\Practice C#\Week1\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.exe
+F:\Practice C#\Week1\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.pdb

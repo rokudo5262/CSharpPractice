@@ -1,0 +1,7 @@
+F:\Learning C#\CSharpPractice\ConsoleApp3\bin\Debug\ConsoleApp3.exe.config
+F:\Learning C#\CSharpPractice\ConsoleApp3\bin\Debug\ConsoleApp3.exe
+F:\Learning C#\CSharpPractice\ConsoleApp3\bin\Debug\ConsoleApp3.pdb
+F:\Learning C#\CSharpPractice\ConsoleApp3\obj\Debug\For.csprojAssemblyReference.cache
+F:\Learning C#\CSharpPractice\ConsoleApp3\obj\Debug\For.csproj.CoreCompileInputs.cache
+F:\Learning C#\CSharpPractice\ConsoleApp3\obj\Debug\ConsoleApp3.exe
+F:\Learning C#\CSharpPractice\ConsoleApp3\obj\Debug\ConsoleApp3.pdb
