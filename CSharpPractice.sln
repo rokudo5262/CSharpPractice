@@ -9,7 +9,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "if-else-switch", "ConsoleAp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "For", "ConsoleApp3\For.csproj", "{3A655494-3EF4-4FC1-916F-42FF62F31BCD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arrays", "Arrays\Arrays.csproj", "{7FEDC4A9-AE11-4E46-998A-C42816AF5CF8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Arrays", "Arrays\Arrays.csproj", "{7FEDC4A9-AE11-4E46-998A-C42816AF5CF8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arrays_2", "Arrays_2\Arrays_2.csproj", "{C8C79181-98F6-4FF6-8D11-A0C6C609BC95}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{7FEDC4A9-AE11-4E46-998A-C42816AF5CF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7FEDC4A9-AE11-4E46-998A-C42816AF5CF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7FEDC4A9-AE11-4E46-998A-C42816AF5CF8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8C79181-98F6-4FF6-8D11-A0C6C609BC95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8C79181-98F6-4FF6-8D11-A0C6C609BC95}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8C79181-98F6-4FF6-8D11-A0C6C609BC95}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8C79181-98F6-4FF6-8D11-A0C6C609BC95}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
