@@ -3,7 +3,7 @@ using System.Text;
 
 namespace ConsoleApp3
 {
-    class Program
+    class ForLoop
     {
         public static void Main(string[] args)
         {
@@ -19,7 +19,7 @@ namespace ConsoleApp3
             Console.WriteLine("*04. Tính Tổng n Số Lẽ Nhập Từ Bàn Phím Và Xuất Ra Dãy Số Đó.       *");
             Console.WriteLine("*05. Nhập Vào 1 Số. Kiểm Tra Số Đó Có Phải Số Nguyên Tố Không       *");
             Console.WriteLine("*05. Nhập Vào n Số Hàng. Vẽ Tam Giác Sao Với Số Hàng Vừa Nhập.      *");
-            Console.WriteLine("*02. Tính Tổng n Số Từ Bàn Phím Và Xuất Ra Dãy Fibonacci Số Đó .*");
+            Console.WriteLine("*02. Tính Tổng n Số Từ Bàn Phím Và Xuất Ra Dãy Fibonacci Số Đó.     *");
             Console.WriteLine("*00. Thoát Chương Trình.                                            *");
             Console.WriteLine("*********************************************************************");
         }
@@ -153,24 +153,25 @@ namespace ConsoleApp3
             int n;
             Console.Write("Nhập vào một số n = ");
             n = Convert.ToInt32(Console.ReadLine());
-            if (n==1 && n==0)
+            if (n<2)
             {
                 Console.WriteLine("{0} không phải số nguyên tố", n);
-                return;
             }
-            else
-                for (int i = 2; i <= n; i++)
+            int count = 0;
+            for (int i = 2; i <= Math.Sqrt(n); i++)
                 {
                 if (n % i == 0)
                 {
-                    Console.WriteLine("{0} không phải số nguyên tố", n);
-                    return;
-                }
-                else
-                { 
-                    Console.WriteLine("{0} là số nguyên tố", n);
-                    return;
+                    count++;
                 }               
+            }
+            if (count == 0)
+            {
+                Console.WriteLine("{0} Là số nguyên tố", n);
+            }
+            else
+            {
+                Console.WriteLine("{0} không phải là số nguyên tố", n);
             }
         }
         public static void VeTamGiacSao()
