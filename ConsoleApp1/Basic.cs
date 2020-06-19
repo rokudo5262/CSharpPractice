@@ -16,24 +16,26 @@ namespace Basic
         }
         public static void Menu()
         {
-            Console.WriteLine("***********************************Menu******************************");
-            Console.WriteLine("*01. Xuất Hello World.                                              *");
-            Console.WriteLine("*02. Chuyển Đổi số Nguyên Thành Số Nhị Phân.                        *");
-            Console.WriteLine("*03. Chuyển Đổi số Nguyên Thành Số Thập Phân.                       *");
-            Console.WriteLine("*04. Chuyển Đổi số Nguyên Thành Số Nhị Phân.                        *");
-            Console.WriteLine("*05. Nhập 2 Số Nguyên a Và b. Tìm Tổng Hiệu Tích Thương Của 2 Số a b*");
-            Console.WriteLine("*06. Nhập Vào Độ C. Đổi Độ C Thành Độ F Và Độ K.                    *");
-            Console.WriteLine("*07. Nhập Vào 3 Số Nguyên. Tính Trung Bình 3 Số Vừa Nhập            *");
-            Console.WriteLine("*08. Nhập Vào 1 Số Nguyên. Tính Bình Phương Và Căn Bật 2 Của Số Nhập.");
-            Console.WriteLine("*09. Tính Chu Vi Và Diện Tích Hình Chữ Nhật.                        *");
-            Console.WriteLine("*10. Tính Chu Vi Và Diện Tích Hinh Vuông.                           *");
-            Console.WriteLine("*11. Tính Chu Vi Và Diện Tích Hinh Thoi.                            *");
-            Console.WriteLine("*12. Tính Chu Vi Và Diện Tích Hinh Tròn.                            *");
-            Console.WriteLine("*13. Tinh Thể Tích Và Diện Tích Hình Cầu.                           *");
-            Console.WriteLine("*14. Tinh Thể Tích Và Diện Tích Hình Hộp Vuông.                     *");
-            Console.WriteLine("*15. Tinh Thể Tích Và Diện Tích Hình Hộp Chữ Nhật.                  *");
-            Console.WriteLine("*00. Thoát Chương Trình.                                            *");
-            Console.WriteLine("*********************************************************************");
+            Console.WriteLine("***********************************Menu*******************************");
+            Console.WriteLine("*01. Xuất Hello World.                                               *");
+            Console.WriteLine("*02. Chuyển Đổi số Nguyên Thành Số Nhị Phân.                         *");
+            Console.WriteLine("*03. Chuyển Đổi số Nguyên Thành Số Thập Phân.                        *");
+            Console.WriteLine("*04. Chuyển Đổi số Nguyên Thành Số Nhị Phân.                         *");
+            Console.WriteLine("*05. Nhập 2 Số Nguyên a Và b. Tìm Tổng Hiệu Tích Thương Của 2 Số a b.*");
+            Console.WriteLine("*06. Nhập Vào Độ C. Đổi Độ C Thành Độ F Và Độ K.                     *");
+            Console.WriteLine("*07. Nhập Vào 3 Số Nguyên. Tính Trung Bình 3 Số Vừa Nhập             *");
+            Console.WriteLine("*08. Nhập Vào 1 Số Nguyên. Tính Bình Phương Và Căn Bật 2 Của Số Nhập.*");
+            Console.WriteLine("*09. Hình Chữ Nhật.                                                  *");
+            Console.WriteLine("*10. Hinh Vuông.                                                     *");
+            Console.WriteLine("*11. Hinh Thoi.                                                      *");
+            Console.WriteLine("*12. Hinh Tròn.                                                      *");
+            Console.WriteLine("*13. Hình Cầu.                                                       *");
+            Console.WriteLine("*14. Hình Hộp Vuông.                                                 *");
+            Console.WriteLine("*15. Hình Hộp Chữ Nhật.                                              *");
+            Console.WriteLine("*16. Hình Nón.                                                       *");
+            Console.WriteLine("*17. Hình Trụ.                                                       *");
+            Console.WriteLine("*00. Thoát Chương Trình.                                             *");
+            Console.WriteLine("**********************************************************************");
         }
         public static void List()
         {
@@ -43,11 +45,11 @@ namespace Basic
                 Menu();
                 Console.Write("Vui Lòng Chọn Chức Năng:");
                 Selectfuntion = Convert.ToInt32(Console.ReadLine());
-                if (Selectfuntion < 0 || Selectfuntion > 15)
+                if (Selectfuntion < 0 || Selectfuntion > 17)
                 {
                     Console.WriteLine("Nhập Sai. Vui Lòng Nhập Lại.");
                 }
-            } while (Selectfuntion < 0 || Selectfuntion > 15);
+            } while (Selectfuntion < 0 || Selectfuntion > 17);
             switch (Selectfuntion)
             {
                 case 1:
@@ -83,31 +85,39 @@ namespace Basic
                     List();
                     break;
                 case 9:
-                    ChuViVaDienTichHinhChuNhat();
+                    HinhChuNhat();
                     List();
                     break;
                 case 10:
-                    ChuViVaDienTichHinhVuong();
+                    HinhVuong();
                     List();
                     break;
                 case 11:
-                    ChuViVaDienTichHinhTamGiac();
+                    HinhTamGiac();
                     List();
                     break;  
                 case 12:
-                    ChuViVaDienTichHinhTron();
+                    HinhTron();
                     List();
                     break;
                 case 13:
-                    TheTichVaDienTichHinhCau();
+                    HinhCau();
                     List();
                     break;
                 case 14:
-                    TheTichVaDienTichHinhHopVuong();
+                    HinhHopVuong();
                     List();
                     break;
                 case 15:
-                    TheTichVaDienTichHinhHopChuNhat();
+                    HinhHopChuNhat();
+                    List();
+                    break;
+                case 16:
+                    HinhNon();
+                    List();
+                    break;
+                case 17:
+                    HinhTru();
                     List();
                     break;
                 default:
@@ -250,7 +260,7 @@ namespace Basic
             Console.WriteLine("Căn Bật 2 Của A={0} Là :{1}", a, sqrt);
             Console.ReadKey();
         }
-        public static void ChuViVaDienTichHinhChuNhat()
+        public static void HinhChuNhat()
         {
             int chieudai;
             int chieurong;
@@ -273,7 +283,7 @@ namespace Basic
             Console.WriteLine("Diện Tích Hình Chữ Nhật Là :{0}", dientichhinhchunhat);
             Console.ReadKey();
         }
-        public static void ChuViVaDienTichHinhVuong()
+        public static void HinhVuong()
         {
             int canh;
             do
@@ -291,25 +301,25 @@ namespace Basic
             Console.WriteLine("Dien Tich Hinh Vuong la :{0}", dientichhinhvuong);
             Console.ReadKey();
         }
-        public static void ChuViVaDienTichHinhTamGiac()
+        public static void HinhTamGiac()
         {
             int canha;
-            Console.Write("Nhap Canh a cua tam giac:");
+            Console.Write("Nhap Cạnh A Của Tam Giác:");
             canha = Convert.ToInt32(Console.ReadLine());
             int canhb;
-            Console.Write("Nhap Canh b cua tam giac:");
+            Console.Write("Nhap Cạnh B Của Tam Giác:");
             canhb = Convert.ToInt32(Console.ReadLine());
             int canhc;
-            Console.Write("Nhap Canh c cua tam giac:");
+            Console.Write("Nhap Cạnh C Của Tam Giác:");
             canhc = Convert.ToInt32(Console.ReadLine());
             int chuvihinhtamgiac = canha + canhb + canhc;
-            Console.WriteLine("Dien Tich Hinh Tam Giac la :{0}", chuvihinhtamgiac);
+            Console.WriteLine("Diê5n Tích Hình Tam Giác la :{0}", chuvihinhtamgiac);
             Double p = (canha + canhb + canhc) / 2;
             double dientichhinhtamgiac = Math.Sqrt(p * (p - canha) * (p - canhb) * (p - canhc));
             Console.WriteLine("Dien Tich Hinh Tam Giac la :{0}", dientichhinhtamgiac);
             Console.ReadKey();
         }
-        public static void ChuViVaDienTichHinhTron()
+        public static void HinhTron()
         {
             int bankinh;
             Console.Write("Nhap Ban Kinh Hinh Tron:");
@@ -321,7 +331,7 @@ namespace Basic
             Console.WriteLine("Dien Tich Hinh Tron la :{0}", dientichhinhtron);
             Console.ReadKey();
         }
-        public static void TheTichVaDienTichHinhCau()
+        public static void HinhCau()
         {
             int bankinhhinhcau;
             do
@@ -340,7 +350,7 @@ namespace Basic
             Console.WriteLine("The Tich Khoi Hinh Cau la :{0}", thetichhinhcau);
             Console.ReadKey();
         }
-        public static void TheTichVaDienTichHinhHopVuong()
+        public static void HinhHopVuong()
         {
             int canhhinhhopvuong;
             do
@@ -358,7 +368,7 @@ namespace Basic
             Console.WriteLine("The Tich Khoi Hinh Cau V={0}", thetichhinhhopvuong);
             Console.ReadKey();
         }
-        public static void TheTichVaDienTichHinhHopChuNhat()
+        public static void HinhHopChuNhat()
         {
             double chieudai;
             double chieurong;
@@ -398,6 +408,78 @@ namespace Basic
             Console.WriteLine("Diện Tích Toàn Phần Của Hình Hộp Chữ Nhật S={0}", DienTichToanPhan);
             Console.WriteLine("Thể Tích Của Hình Hộp Chữ Nhật V={0}", TheTichHinhHop);
             Console.WriteLine("Đường Chéo Của Hình Hộp Chữ Nhật D={0}", DuongCheoHinhHop);
+            Console.ReadKey();
+        }
+        public static void HinhNon()
+        {
+            double p = Math.PI;
+            double BanKinhDay;
+            do
+            {
+                Console.Write("Nhập Vào Bán Kính Đáy Hình Nón:");
+                BanKinhDay = Convert.ToInt32(Console.ReadLine());
+                if (BanKinhDay < 0)
+                {
+                    Console.Write("Nhập Sai Vui Lòng Nhập Lại");
+                }
+            } while (BanKinhDay < 0);
+                double DuongSinh;
+            do
+            {
+                Console.Write("Nhập Vào Đường Sinh Hình Nón:");
+                DuongSinh = Convert.ToInt32(Console.ReadLine());
+                if (DuongSinh < 0)
+                {
+                    Console.Write("Nhập Sai Vui Lòng Nhập Lại");
+                }
+            } while (DuongSinh < 0);
+            double DuongCao;
+            do
+            {
+                Console.Write("Nhập Vào Đường Cao Hình Nón:");
+                DuongCao = Convert.ToInt32(Console.ReadLine());
+                if (DuongCao < 0)
+                {
+                    Console.Write("Nhập Sai Vui Lòng Nhập Lại");
+                }
+            } while (DuongCao < 0);
+            double DienTichXungQuanh = p * BanKinhDay * DuongCao;
+            double DienTichToanPhan = DienTichXungQuanh + (p* Math.Pow(BanKinhDay,2));
+            double TheTichHinhNon=(p* Math.Pow(BanKinhDay, 2)*DuongCao)/3;
+            Console.WriteLine("Diện Tích Xung Quanh Của Hình Nón S={0}", DienTichXungQuanh);
+            Console.WriteLine("Diện Tích Toàn Phần Của Hình Nón S={0}", DienTichToanPhan);
+            Console.WriteLine("Thể Tích Của Hình Nón V={0}", TheTichHinhNon);
+            Console.ReadKey();
+        }
+        public static void HinhTru()
+        {
+            double p = Math.PI;
+            double BanKinh;
+            do
+            {
+                Console.Write("Nhập Vào Bán Kính Hình Trụ:");
+                BanKinh = Convert.ToInt32(Console.ReadLine());
+                if (BanKinh < 0)
+                {
+                    Console.Write("Nhập Sai Vui Lòng Nhập Lại");
+                }
+            } while (BanKinh < 0);
+            double DuongCao;
+            do
+            {
+                Console.Write("Nhập Vào Đường Cao Hình Trụ:");
+                DuongCao = Convert.ToInt32(Console.ReadLine());
+                if (DuongCao < 0)
+                {
+                    Console.Write("Nhập Sai Vui Lòng Nhập Lại");
+                }
+            } while (DuongCao < 0);
+            double DienTichXungQuanh = 2 * p * DuongCao * BanKinh;
+            double DienTichToanPhan = DienTichXungQuanh + (2 * p * Math.Pow(BanKinh, 2));
+            double TheTichHinhTru = p * Math.Pow(BanKinh, 2) * DuongCao;
+            Console.WriteLine("Diện Tích Xung Quanh Của Hình Trụ S={0}", DienTichXungQuanh);
+            Console.WriteLine("Diện Tích Toàn Phần Của Hình Trụ S={0}", DienTichToanPhan);
+            Console.WriteLine("Thể Tích Của Hình Trụ V={0}", TheTichHinhTru);
             Console.ReadKey();
         }
     }
