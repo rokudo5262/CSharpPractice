@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Text;
+using System.Xml.Schema;
 
 namespace Arrays
 {
@@ -13,14 +14,16 @@ namespace Arrays
         public static void Menu()
         {
             Console.WriteLine("********************************Menu***************************************************");
-            Console.WriteLine("*01. Nhập 10 Phần Tử Vào Mảng 1 Chiều.Tính Tổng Và Xuất Các Phần Tử Của Mảng.          *");
+            Console.WriteLine("*01. Nhập 10 Phần Tử Vào Mảng 1 Chiều.Tính Tổng Và Xuất Các Phần Tử Của Mảng.         *");
             Console.WriteLine("*02. Nhập N Phần Tử Vào Mảng 1 Chiều.Tính Tổng Và Xuất Các Phần Tử Của Mảng.          *");
             Console.WriteLine("*03. Nhập N Phần Tữ Vào Mảng 1 Chiều.Đếm số lần xuất hiện của từng phần tử trong mảng.*");
             Console.WriteLine("*04. Nhập N Phần Tữ Vào Mảng 1 Chiều.Chia mảng thành mảng chẵn, mảng lẻ.              *");
             Console.WriteLine("*05. Nhập N Phần Tữ Vào Mảng 1 Chiều.Sắp Xếp Mảng Tăng Dần.                           *");
             Console.WriteLine("*06. Nhập N Phần Tữ Vào Mảng 1 Chiều.Sắp Xếp Mảng Giảm Dần.                           *");
-            Console.WriteLine("*07. Nhập N Phần Tữ Vào Mảng 1 Chiều.Tìm Phần Tử.       *");
+            Console.WriteLine("*07. Nhập N Phần Tữ Vào Mảng 1 Chiều.Tìm Phần Tử.                                     *");
             Console.WriteLine("*08. Nhập N Phần Tữ Vào Mảng 1 Chiều.In Các Phần Tử Xuất Hiện 1 Lần Trong Mảng.       *");
+            Console.WriteLine("*09. Nhập N Phần Tữ Vào Mảng 1 Chiều.In Mảng Theo Chiều Ngược Lại.                    *");
+            Console.WriteLine("*09. Nhập N Phần Tữ Vào Mảng 1 Chiều.Chèn 1 Phần Tử Vào Mảng.                         *");
             Console.WriteLine("*00. Thoát Chương Trình.                                                              *");
             Console.WriteLine("***************************************************************************************");
         }
@@ -72,6 +75,7 @@ namespace Arrays
                     List();
                     break;
                 case 9:
+                    InMangTheoChieuNguoc();
                     List();
                     break;
                 case 10:
@@ -352,6 +356,57 @@ namespace Arrays
                 {
                     Console.Write("{0} ", array[i]);
                 }
+            }
+            Console.WriteLine();
+            Console.ReadKey();
+        }
+        public static void InMangTheoChieuNguoc()
+        {
+            int n;
+            int deleteposition;
+            int[] array = new int[100];
+            int tong = 0;
+            Console.Write("Nhập n Phần Tử Vào Mảng:");
+            n = Convert.ToInt32(Console.ReadLine());
+            NhapMang(n, array);
+            XuatMang(n, array);
+            TinhTongMang(n, array, tong);
+            Console.Write("In Mảng Theo Chiều Ngược Lại:");
+            for (int i = n - 1; i >= 0; i--)
+            {
+                Console.Write("{0} ", array[i]);
+            }
+            Console.WriteLine();
+            Console.ReadKey();
+        }
+        public static void XoaPhanTuTrongMang()
+        {
+            int n;
+            int[] array = new int[100];
+            int tong = 0;
+            Console.Write("Nhập n Phần Tử Vào Mảng:");
+            n = Convert.ToInt32(Console.ReadLine());
+            NhapMang(n, array);
+            XuatMang(n, array);
+            TinhTongMang(n, array, tong);
+            int deleteposition;
+            Console.Write("\nNhap vi tri can xoa: ");
+            deleteposition = Convert.ToInt32(Console.ReadLine());
+            /* xac dinh vi tri cua i trong mang*/
+            int i = 0;
+            while (i != deleteposition - 1)
+                i++;
+            /*vi tri i trong mang se duoc thay the boi gia tri ben phai cua no */
+            while (i < n)
+            {
+                array[i] = array[i + 1];
+                i++;
+            }
+            n--;
+            Console.Write("Mảng Sau Khi Xóa phần Tử: ");
+            for (i = 0; i < n; i++)
+            {
+                Console.Write("{0} ", array[i]);
             }
             Console.WriteLine();
             Console.ReadKey();

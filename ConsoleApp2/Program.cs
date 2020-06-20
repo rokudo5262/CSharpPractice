@@ -480,15 +480,15 @@ namespace ConsoleApp2
         }
         public static void BangCuuChuong()
         {
-            int a, b;
+            int a=0;
+            int b = 1;
+            int c = a * b;
             a = 0;
             do
             {
-                b = 1;
                 do
                 {
-                    Console.WriteLine("{0} x {1} = {2}",
-                        a, b, a * b);
+                    Console.WriteLine("{0} x {1} = {2}",a, b, c);
                     b++;
                 }
                 while (b <= 10);

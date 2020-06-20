@@ -45,11 +45,11 @@ namespace Basic
                 Menu();
                 Console.Write("Vui Lòng Chọn Chức Năng:");
                 Selectfuntion = Convert.ToInt32(Console.ReadLine());
-                if (Selectfuntion < 0 || Selectfuntion > 17)
+                if (Selectfuntion < 0 || Selectfuntion > 18)
                 {
                     Console.WriteLine("Nhập Sai. Vui Lòng Nhập Lại.");
                 }
-            } while (Selectfuntion < 0 || Selectfuntion > 17);
+            } while (Selectfuntion < 0 || Selectfuntion > 18);
             switch (Selectfuntion)
             {
                 case 1:
