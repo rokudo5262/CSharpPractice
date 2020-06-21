@@ -3,7 +3,7 @@ using System.Text;
 
 namespace Arrays_2
 {
-    class Program
+    class Array_2
     {
         static void Main(string[] args)
         {
@@ -37,6 +37,7 @@ namespace Arrays_2
                     List();
                     break;
                 case 2:
+                    Mang2ChieuNPhanTu();
                     List();
                     break;
                 case 3:
@@ -72,7 +73,8 @@ namespace Arrays_2
         public static void Mang2Chieu()
         {
             int[,] array = new int[3, 3];
-            Console.Write("Nhap cac phan tu vao trong mang hai chieu:");
+            int tong = 0;
+            Console.WriteLine("Nhập Các Phần Tử Vào Trong Mảng Hai Chiều:");
             for (int i = 0; i < 3; i++)
             {
                 for (int j = 0; j < 3; j++)
@@ -86,9 +88,42 @@ namespace Arrays_2
             {
                 Console.WriteLine();
                 for (int j = 0; j < 3; j++)
+                {
                     Console.Write("{0} ", array[i, j]);
+                    tong += array[i, j];
+                }
             }
             Console.WriteLine();
+            Console.WriteLine("Tổng Của Mảng Hai Chiều Là {0}",tong); 
+            Console.ReadKey();
+        }
+        public static void MaTranVuong()
+        {
+            int[,] array = new int[100, 100];
+            int tong = 0;
+            Console.Write("Nhập n Phần Tử Vào Mảng:");
+            int n = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Nhập Các Phần Tử Vào Trong Mảng Hai Chiều:");
+            for (int i = 0; i < n; i++)
+            {
+                for (int j = 0; j < n; j++)
+                {
+                    Console.Write("Phan tu - [{0},{1}]: ", i, j);
+                    array[i, j] = Convert.ToInt32(Console.ReadLine());
+                }
+            }
+            Console.WriteLine("In Mảng Hai Chiều:");
+            for (int i = 0; i < 3; i++)
+            {
+                Console.WriteLine();
+                for (int j = 0; j < 3; j++)
+                {
+                    Console.Write("{0} ", array[i, j]);
+                    tong += array[i, j];
+                }
+            }
+            Console.WriteLine();
+            Console.WriteLine("Tổng Của Mảng Hai Chiều Là {0}", tong);
             Console.ReadKey();
         }
     }
