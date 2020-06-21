@@ -13,7 +13,7 @@ namespace Arrays_2
         public static void Menu()
         {
             Console.WriteLine("*******************************Menu***********************************");
-            Console.WriteLine("*01.Nhập Mảng 2 Chiều .Xuất Và Tính Tổng Các Phần Tử của Mảng        *");
+            Console.WriteLine("*01.Nhập Mảng 2 Chiều  .Xuất Và Tính Tổng Các Phần Tử của Mảng        *");
             Console.WriteLine("*00. Thoát Chương Trình.                                             *");
             Console.WriteLine("**********************************************************************");
         }

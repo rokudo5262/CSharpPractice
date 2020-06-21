@@ -133,27 +133,24 @@ namespace Basic
         }
         public static void ChuyenDoiNhiPhan()
         {
-            int n;
             Console.WriteLine("Nhập Vào Số Nguyên n:");
-            n = Convert.ToInt32(Console.ReadLine());
+            int n = Convert.ToInt32(Console.ReadLine());
             string binary = Convert.ToString(n, 2);
             Console.WriteLine("Binary Của Số n={0} Là: {1}",n,binary);
             Console.ReadKey();
         }
         public static void ChuyenDoiThapLucPhan()
         {
-            int n;
             Console.WriteLine("Nhập Vào Số Nguyên n:");
-            n = Convert.ToInt32(Console.ReadLine());
+            int n = Convert.ToInt32(Console.ReadLine());
             string hexadecimal = Convert.ToString(n, 16);
             Console.WriteLine("Hexadecimal Của Số n={0} Là: {1}", n, hexadecimal);
             Console.ReadKey();
         }
         public static void ChuyenDoiBatPhan()
         {
-            int n;
             Console.WriteLine("Nhập Vào Số Nguyên n:");
-            n = Convert.ToInt32(Console.ReadLine());
+            int n = Convert.ToInt32(Console.ReadLine());
             string octal = Convert.ToString(n, 8);
             Console.WriteLine("octal Của Số n={0} Là: {1}", n, octal);
             Console.ReadKey();
@@ -162,10 +159,6 @@ namespace Basic
         {
             int a;
             int b;
-            int tong;
-            int hieu;
-            int tich;
-            float thuong;
             do
             {
                 Console.Write("Nhập Số Nguyên A:");
@@ -184,21 +177,20 @@ namespace Basic
                     Console.Write("Nhập Sai Vui Lòng Nhập Lại");
                 }
             } while (b < 0);
-            tong = a + b;
+            double tong = a + b;
             Console.WriteLine("Tổng Hai Số {0} + {1} = {2}",a, b, tong);
-            hieu = a - b;
+            double hieu = a - b;
             Console.WriteLine("Hiệu Hai Số {0} + {1} = {2}", a, b, hieu);
-            tich = a * b;
+            double tich = a * b;
             Console.WriteLine("Tích Hai Số {0} + {1} = {2}", a, b, tich);
-            thuong = a / b;
+            double thuong = a / b;
             Console.WriteLine("Thương Hai Số {0} + {1} = {2}", a, b, thuong);
             Console.ReadKey();
         }
         public static void ConvertTemperature()
         {
-            double Celcius;
             Console.Write("Nhap Vào Độ C:");
-            Celcius = Convert.ToInt32(Console.ReadLine());
+            double Celcius = Convert.ToInt32(Console.ReadLine());
             double Kelvin = Celcius + 273.12;
             double Fahrenheit = (Celcius * 1.8) + 32;
             Console.WriteLine("Độ Celcius Là :{0} C", Celcius);

@@ -106,12 +106,10 @@ namespace ConsoleApp2
         }
         public static void SoSanhHaiSoNguyen()
         {
-            int a;
             Console.Write("Nhập Số Nguyên A:");
-            a = Convert.ToInt32(Console.ReadLine());
-            int b;
+            int a = Convert.ToInt32(Console.ReadLine());
             Console.Write("Nhập Số Nguyên B:");
-            b = Convert.ToInt32(Console.ReadLine());
+            int b = Convert.ToInt32(Console.ReadLine());
             if (a == b)
             {
                 Console.WriteLine("a={0} Bằng b={1}", a, b);
@@ -128,15 +126,12 @@ namespace ConsoleApp2
         }
         public static void SoSanhBaSoNguyen()
         {
-            int a;
             Console.Write("Nhập Số Nguyên A:");
-            a = Convert.ToInt32(Console.ReadLine());
-            int b;
+            int a = Convert.ToInt32(Console.ReadLine());
             Console.Write("Nhập Số Nguyên B:");
-            b = Convert.ToInt32(Console.ReadLine());
-            int c;
+            int b = Convert.ToInt32(Console.ReadLine());
             Console.Write("Nhập Số Nguyên C:");
-            c = Convert.ToInt32(Console.ReadLine());
+            int c = Convert.ToInt32(Console.ReadLine());
             int max = a;
             if (b > max)
             {
@@ -161,9 +156,8 @@ namespace ConsoleApp2
         }
         public static void KiemTraNguyenAmNguyenDuong()
         {
-            int a;
             Console.Write("Nhập Số Nguyên A:");
-            a = Convert.ToInt32(Console.ReadLine());
+            int a = Convert.ToInt32(Console.ReadLine());
             if (a == 0)
             {
                 Console.WriteLine("A = {0} không Phải Là Số Nguyên Dương Cũng Không Phải Số Nguyên Âm", a);
@@ -180,9 +174,8 @@ namespace ConsoleApp2
         }
         public static void KiemtraSoChanLe()
         {
-            int a;
             Console.Write("Nhập Số Nguyên A:");
-            a = Convert.ToInt32(Console.ReadLine());
+            int a = Convert.ToInt32(Console.ReadLine());
             if (a % 2 == 0)
             {
                 Console.WriteLine("A = {0} Là Số Chẳn", a);
@@ -409,9 +402,8 @@ namespace ConsoleApp2
         }
         public static void GiaiPhuongTrinhBat1()
         {
-            float a;
             Console.WriteLine("Nhập Vào Hệ Số A: ");
-            a = float.Parse(Console.ReadLine());
+            float a = float.Parse(Console.ReadLine());
             if (a == 0)
             {
                 Console.WriteLine("A phải khác 0");
@@ -427,15 +419,12 @@ namespace ConsoleApp2
         }
         public static void GiaiPhuongTrinhBat2()
         {
-            double A;
             Console.Write("Nhập Vào Hệ Số A:");
-            A = Convert.ToInt32(Console.ReadLine());
-            double B;
+            double A = Convert.ToInt32(Console.ReadLine());
             Console.Write("Nhập Vào Hệ Số B:");
-            B = Convert.ToInt32(Console.ReadLine());
-            double C;
+            double B = Convert.ToInt32(Console.ReadLine());
             Console.Write("Nhập Vào Hệ Số C:");
-            C = Convert.ToInt32(Console.ReadLine());
+            double C = Convert.ToInt32(Console.ReadLine());
             double delta = Math.Pow(B, 2) - 4 * A * C;
             double nghiem1 = (-B + Math.Sqrt(delta)) / (2 * A);
             double nghiem2 = (-B - Math.Sqrt(delta)) / (2 * A);
@@ -462,28 +451,23 @@ namespace ConsoleApp2
         }
         public static void GiaiPhuongTrinhBat3()
         {
-            double a;
-            double b;
-            double c;
-            double d;
             Console.Write("Nhập Vào Hệ Số A:");
-            a = Convert.ToInt32(Console.ReadLine());
+            double a = Convert.ToInt32(Console.ReadLine());
             Console.Write("Nhập Vào Hệ Số B:");
-            b = Convert.ToInt32(Console.ReadLine());
+            double b = Convert.ToInt32(Console.ReadLine());
             Console.Write("Nhập Vào Hệ Số C:");
-            c = Convert.ToInt32(Console.ReadLine());
+            double c = Convert.ToInt32(Console.ReadLine());
             Console.Write("Nhập Vào Hệ Số D:");
-            d = Convert.ToInt32(Console.ReadLine());
+            double d = Convert.ToInt32(Console.ReadLine());
            double e= a + b + c + d;
             Console.WriteLine("{0}", e);
             Console.ReadKey();
         }
         public static void BangCuuChuong()
         {
-            int a=0;
+            int a = 0;
             int b = 1;
             int c = a * b;
-            a = 0;
             do
             {
                 do

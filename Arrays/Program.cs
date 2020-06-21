@@ -23,7 +23,10 @@ namespace Arrays
             Console.WriteLine("*07. Nhập N Phần Tữ Vào Mảng 1 Chiều.Tìm Phần Tử.                                     *");
             Console.WriteLine("*08. Nhập N Phần Tữ Vào Mảng 1 Chiều.In Các Phần Tử Xuất Hiện 1 Lần Trong Mảng.       *");
             Console.WriteLine("*09. Nhập N Phần Tữ Vào Mảng 1 Chiều.In Mảng Theo Chiều Ngược Lại.                    *");
-            Console.WriteLine("*09. Nhập N Phần Tữ Vào Mảng 1 Chiều.Chèn 1 Phần Tử Vào Mảng.                         *");
+            Console.WriteLine("*10. Nhập N Phần Tữ Vào Mảng 1 Chiều.Xóa 1 Phần Tử Trong Mảng.                        *");
+            Console.WriteLine("*11. Nhập N Phần Tữ Vào Mảng 1 Chiều.Chèn 1 Phần Tử Vào Mảng.                         *");
+            Console.WriteLine("*12. Nhập N Phần Tữ Vào Mảng 1 Chiều.Tìm Phần Tử Lớn Thứ 2 Trong Mảng.                *");
+            Console.WriteLine("*13. Nhập N Phần Tữ Vào Mảng 1 Chiều.Tìm Phần Tử Bé Thứ 2 Trong Mảng.                 *");
             Console.WriteLine("*00. Thoát Chương Trình.                                                              *");
             Console.WriteLine("***************************************************************************************");
         }
@@ -35,11 +38,11 @@ namespace Arrays
                 Menu();
                 Console.Write("Vui Lòng Chọn Chức Năng:");
                 Selectfuntion = Convert.ToInt32(Console.ReadLine());
-                if (Selectfuntion < 0 || Selectfuntion > 10)
+                if (Selectfuntion < 0 || Selectfuntion > 12)
                 {
                     Console.WriteLine("Nhập Sai. Vui Lòng Nhập Lại.");
                 }
-            } while (Selectfuntion < 0 || Selectfuntion > 10);
+            } while (Selectfuntion < 0 || Selectfuntion > 12);
             switch (Selectfuntion)
             {
                 case 1:
@@ -79,9 +82,19 @@ namespace Arrays
                     List();
                     break;
                 case 10:
+                    XoaPhanTuTrongMang();
                     List();
                     break;
                 case 11:
+                    ChenPhanTuVaoMangKhongSapXep();
+                    List();
+                    break;
+                case 12:
+                    TimPhanTuLonThuHaiTrongMang();
+                    List();
+                    break;
+                case 13:
+                    TimPhanTuBeThuHaiTrongMang();
                     List();
                     break;
                 default:
@@ -110,11 +123,10 @@ namespace Arrays
         }
         public static void Mang1ChieuNPhanTu()
         {
-            int n;
             int tong = 0;
             int[] array = new int[100];
             Console.Write("Nhập n Phần Tử Vào Mảng:");
-            n = Convert.ToInt32(Console.ReadLine());
+            int n = Convert.ToInt32(Console.ReadLine());
             NhapMang(n, array);
             XuatMang(n, array);
             TinhTongMang(n, array, tong);
@@ -122,7 +134,6 @@ namespace Arrays
         }
         public static void NhapMang(int n,int[] array)
         {
-            
             Console.WriteLine("Nhập {0} Phần Tử Vào Trong Mảng:", n);
             for (int i = 0; i < n; i++)
             {
@@ -195,10 +206,9 @@ namespace Arrays
             int[] array3 = new int[100]; // mang chua cac phan tu le
             int tong = 0;
             int j=0;
-            int k=0;
-            int n;
+            int k=0;;
             Console.Write("Nhập n Phần Tử Vào Mảng:");
-            n = Convert.ToInt32(Console.ReadLine());
+            int n = Convert.ToInt32(Console.ReadLine());
             NhapMang(n, array1);
             XuatMang(n, array1);
             TinhTongMang(n, array1, tong);
@@ -235,9 +245,8 @@ namespace Arrays
             int[] array = new int[100];
             int tong = 0;
             int bientrunggian;
-            int n;
             Console.Write("Nhập n Phần Tử Vào Mảng:");
-            n = Convert.ToInt32(Console.ReadLine());
+            int n = Convert.ToInt32(Console.ReadLine());
             NhapMang(n, array);
             XuatMang(n, array);
             TinhTongMang(n, array, tong);
@@ -268,9 +277,8 @@ namespace Arrays
             int[] array = new int[100];
             int bientrunggian;
             int tong = 0;
-            int n;
             Console.Write("Nhập n Phần Tử Vào Mảng:");
-            n = Convert.ToInt32(Console.ReadLine());
+            int n = Convert.ToInt32(Console.ReadLine());
             NhapMang(n, array);
             XuatMang(n, array);
             TinhTongMang(n, array, tong);
@@ -300,11 +308,10 @@ namespace Arrays
         {
             int[] array = new int[100];
             int tong = 0;
-            int n;
             int max = array[0];
             int min = array[0];
             Console.Write("Nhập n Phần Tử Vào Mảng:");
-            n = Convert.ToInt32(Console.ReadLine());
+            int n = Convert.ToInt32(Console.ReadLine());
             NhapMang(n, array);
             XuatMang(n, array);
             TinhTongMang(n, array, tong);
@@ -325,12 +332,11 @@ namespace Arrays
         }
         public static void InCacPhanTuXuatHienMotLan()
         {
-            int n;
             int[] array = new int[100];
             int tong = 0;
             int bien_dem;
             Console.Write("Nhập n Phần Tử Vào Mảng:");
-            n = Convert.ToInt32(Console.ReadLine());
+            int n = Convert.ToInt32(Console.ReadLine());
             NhapMang(n, array);
             XuatMang(n, array);
             TinhTongMang(n, array, tong);
@@ -362,12 +368,10 @@ namespace Arrays
         }
         public static void InMangTheoChieuNguoc()
         {
-            int n;
-            int deleteposition;
             int[] array = new int[100];
             int tong = 0;
             Console.Write("Nhập n Phần Tử Vào Mảng:");
-            n = Convert.ToInt32(Console.ReadLine());
+            int n = Convert.ToInt32(Console.ReadLine());
             NhapMang(n, array);
             XuatMang(n, array);
             TinhTongMang(n, array, tong);
@@ -379,18 +383,46 @@ namespace Arrays
             Console.WriteLine();
             Console.ReadKey();
         }
-        public static void XoaPhanTuTrongMang()
+        public static void ChenPhanTuVaoMangKhongSapXep()
         {
-            int n;
             int[] array = new int[100];
             int tong = 0;
             Console.Write("Nhập n Phần Tử Vào Mảng:");
-            n = Convert.ToInt32(Console.ReadLine());
+            int n = Convert.ToInt32(Console.ReadLine());
+            NhapMang(n, array);
+            XuatMang(n, array);
+            TinhTongMang(n, array, tong);
+            Console.Write("Nhập Giá Trị Phần Tử Mới Cần Chèn:");
+            int add = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Nhập Vị Trí Cần chèn Phần Tử:");
+            int addposition = Convert.ToInt32(Console.ReadLine());
+            /* di chuyen vi tri cac phan tu ben phai cua mang */
+            for (int i = n; i >= addposition; i--)
+            {
+                array[i] = array[i - 1];
+            }
+            /* chen gia tri vao vi tri da cho */
+            array[addposition - 1] = add;
+            Console.WriteLine("Mảng Sau Khi Chèn Phần Tử:");
+            for (int i = 0; i <= n; i++)
+            {
+                Console.Write("{0} ", array[i]);
+            }
+            Console.WriteLine();
+            Console.ReadKey();
+
+        }
+        public static void XoaPhanTuTrongMang()
+        {
+            int[] array = new int[100];
+            int tong = 0;
+            Console.Write("Nhập n Phần Tử Vào Mảng:");
+            int n = Convert.ToInt32(Console.ReadLine());
             NhapMang(n, array);
             XuatMang(n, array);
             TinhTongMang(n, array, tong);
             int deleteposition;
-            Console.Write("\nNhap vi tri can xoa: ");
+            Console.WriteLine("Nhập Vị Trí Cần Xóa:");
             deleteposition = Convert.ToInt32(Console.ReadLine());
             /* xac dinh vi tri cua i trong mang*/
             int i = 0;
@@ -403,7 +435,7 @@ namespace Arrays
                 i++;
             }
             n--;
-            Console.Write("Mảng Sau Khi Xóa phần Tử: ");
+            Console.Write("Mảng Sau Khi Xóa Phần Tử: ");
             for (i = 0; i < n; i++)
             {
                 Console.Write("{0} ", array[i]);
@@ -411,5 +443,83 @@ namespace Arrays
             Console.WriteLine();
             Console.ReadKey();
         }
-    }
+        public static void TimPhanTuLonThuHaiTrongMang()
+        {
+            int[] array = new int[100];
+            int tong = 0;
+            Console.Write("Nhập n Phần Tử Vào Mảng:");
+            int n = Convert.ToInt32(Console.ReadLine());
+            NhapMang(n, array);
+            XuatMang(n, array);
+            TinhTongMang(n, array, tong);
+            int max = 0;
+            int j = 0;
+            for (int i = 0; i < n; i++)
+            {
+                if (max < array[i])
+                {
+                    max = array[i];
+                    j = i;
+                }
+            }
+            /* bo qua phan tu lon nhat nay va tim phan tu lon thu hai */
+            int second_max = 0;
+            for (int i = 0; i < n; i++)
+            {
+                if (i == j)
+                {
+                    i++;  /* bo qua phan tu lon nhat */
+                    i--;
+                }
+                else
+                {
+                    if (second_max < array[i])
+                    {
+                        second_max = array[i];
+                    }
+                }
+            }
+            Console.WriteLine("Phần Tử Lớn Thứ Hai Trong Mảng Là:{0}", second_max);
+            Console.ReadKey();
+        }
+        public static void TimPhanTuBeThuHaiTrongMang()
+        {
+            int[] array = new int[100];
+            int tong = 0;
+            Console.Write("Nhập n Phần Tử Vào Mảng:");
+            int n = Convert.ToInt32(Console.ReadLine());
+            NhapMang(n, array);
+            XuatMang(n, array);
+            TinhTongMang(n, array, tong);
+            int min = 0;
+            int j = 0;
+            for (int i = 0; i < n; i++)
+            {
+                if (min > array[i])
+                {
+                    min = array[i];
+                    j = i;
+                }
+            }
+            /* bo qua phan tu lon nhat nay va tim phan tu lon thu hai */
+            int second_min = 0;
+            for (int i = 0; i < n; i++)
+            {
+                if (i == j)
+                {
+                    i++;  /* bo qua phan tu lon nhat */
+                    i--;
+                }
+                else
+                {
+                    if (second_min > array[i])
+                    {
+                        second_min = array[i];
+                    }
+                }
+            }
+            Console.WriteLine("Phần Tử Bé Thứ Hai Trong Mảng Là:{0}", second_min);
+            Console.ReadKey();
+        }
+    }  
 }
