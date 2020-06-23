@@ -18,6 +18,8 @@ namespace Arrays_2
             Console.WriteLine("*03.Nhập Ma Trận Thường nxm Phần Tử.Xuất Và Tính Tổng Các Phần Tử Của Ma Trận. *");
             Console.WriteLine("*04.Nhập Ma Trận Thường nxm Phần Tử.Tính Tổng Các Phần Tử Của Đường Chéo Chính.*");
             Console.WriteLine("*05.Nhập Ma Trận Thường nxm Phần Tử.Tính Tổng Các Phần Tử Của Đường Chéo Phụ.  *");
+            Console.WriteLine("*06.Nhập Ma Trận Thường nxm Phần Tử.Tìm Giá Trị Lớn Nhất Của Ma Trận.          *");
+            Console.WriteLine("*07.Nhập Ma Trận Thường nxm Phần Tử.Tìm Giá Trị Bé Nhất Của Ma Trận.           *");
             Console.WriteLine("*00. Thoát Chương Trình.                                                       *");
             Console.WriteLine("********************************************************************************");
         }
@@ -57,9 +59,11 @@ namespace Arrays_2
                     List();
                     break;
                 case 6:
+                    TimGiaTriLonNhat();
                     List();
                     break;
                 case 7:
+                    TimGiaTriBeNhat();
                     List();
                     break;
                 case 8:
@@ -225,6 +229,7 @@ namespace Arrays_2
         }
         public static void TongDuongCheoPhu()
         {
+            int p = 0;
             int tongduongcheophu = 0;
             Console.Write("Nhập n Là Chiều Dài Ma Trận:");
             int n = Convert.ToInt32(Console.ReadLine());
@@ -235,8 +240,13 @@ namespace Arrays_2
             XuatMaTranThuong(n, m, array);
             for (int i = 0; i < n; i++)
             {
-                for (int j = 0; j < n; j++)
+                p = p - 1;
+                for (int j = 0; j < m; j++)
                 {
+                    if (j == p)
+                    {
+                        tongduongcheophu = tongduongcheophu + array[i, j];
+                    }
                 }
             }
             Console.WriteLine("Tổng Đường Chéo Phụ Của Ma Trận Là {0}", tongduongcheophu);
@@ -244,6 +254,7 @@ namespace Arrays_2
         }
         public static void TimGiaTriLonNhat()
         {
+            
             Console.Write("Nhập n Là Chiều Dài Ma Trận:");
             int n = Convert.ToInt32(Console.ReadLine());
             Console.Write("Nhập m Là Chiều Rộng Ma Trận:");
@@ -251,6 +262,20 @@ namespace Arrays_2
             int[,] array = new int[n, m];
             NhapMaTranThuong(n, m, array);
             XuatMaTranThuong(n, m, array);
+            Console.WriteLine();
+            int max= array[0,0];
+            for (int i = 1; i < n; i++)
+            {
+                for (int j = 1; j < m; i++)
+                {
+                    if (max < array[i, j])
+                    {
+                        max = array[i, j];
+                    }
+                }
+            }
+            
+            Console.WriteLine("Giá Trị Lớn Nhất Của Ma Trận Là : {0}", max);
         }
         public static void TimGiaTriBeNhat()
         {
@@ -261,6 +286,18 @@ namespace Arrays_2
             int[,] array = new int[n, m];
             NhapMaTranThuong(n, m, array);
             XuatMaTranThuong(n, m, array);
+            int min = array[0, 0];
+            for (int i = 1; i < n; i++)
+            {
+                for (int j = 1; j < m; i++)
+                {
+                    if (min > array[i, j])
+                    {
+                        min = array[i, j];
+                    }
+                }
+            }
+            Console.WriteLine("Giá Trị Bé Nhất Của Ma Trận Là : {0}",min);
         }
     }
 
