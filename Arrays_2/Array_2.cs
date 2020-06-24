@@ -18,8 +18,11 @@ namespace Arrays_2
             Console.WriteLine("*03.Nhập Ma Trận Thường nxm Phần Tử.Xuất Và Tính Tổng Các Phần Tử Của Ma Trận. *");
             Console.WriteLine("*04.Nhập Ma Trận Thường nxm Phần Tử.Tính Tổng Các Phần Tử Của Đường Chéo Chính.*");
             Console.WriteLine("*05.Nhập Ma Trận Thường nxm Phần Tử.Tính Tổng Các Phần Tử Của Đường Chéo Phụ.  *");
-            Console.WriteLine("*06.Nhập Ma Trận Thường nxm Phần Tử.Tìm Giá Trị Lớn Nhất Của Ma Trận.          *");
-            Console.WriteLine("*07.Nhập Ma Trận Thường nxm Phần Tử.Tìm Giá Trị Bé Nhất Của Ma Trận.           *");
+            Console.WriteLine("*06.Nhập Ma Trận Thường nxm Phần Tử.Tính Tổng Các Dòng Của Ma Trận.            *");
+            Console.WriteLine("*07.Nhập Ma Trận Thường nxm Phần Tử.Tính Tổng Các Cột Của Ma Trận.             *");
+            Console.WriteLine("*08.Nhập Ma Trận Thường nxm Phần Tử.Tính Tổng Các Dòng Và Các Cột Của Ma Trận. *");
+            Console.WriteLine("*09.Nhập Ma Trận Thường nxm Phần Tử.Tìm Giá Trị Lớn Nhất Của Ma Trận.          *");
+            Console.WriteLine("*10.Nhập Ma Trận Thường nxm Phần Tử.Tìm Giá Trị Bé Nhất Của Ma Trận.           *");
             Console.WriteLine("*00. Thoát Chương Trình.                                                       *");
             Console.WriteLine("********************************************************************************");
         }
@@ -59,20 +62,23 @@ namespace Arrays_2
                     List();
                     break;
                 case 6:
-                    TimGiaTriLonNhat();
+                    TimTongCacDong();
                     List();
                     break;
                 case 7:
-                    TimGiaTriBeNhat();
+                    TimTongCacCot();
                     List();
                     break;
                 case 8:
+                    TimTongCacDongVaCacCotCuaMaTran();
                     List();
                     break;
                 case 9:
+                    TimGiaTriLonNhat();
                     List();
                     break;
                 case 10:
+                    TimGiaTriBeNhat();
                     List();
                     break;
                 default:
@@ -105,10 +111,10 @@ namespace Arrays_2
                 }
             }
             Console.WriteLine();
-            Console.WriteLine("Tổng Của Ma Trận Vuông Là {0}",tong); 
+            Console.WriteLine("Tổng Của Ma Trận Vuông Là {0}", tong);
             Console.ReadKey();
         }
-        public static void NhapMaTranVuong(int n,int[,] array)
+        public static void NhapMaTranVuong(int n, int[,] array)
         {
             Console.WriteLine("Nhập Các Phần Tử Vào Ma Trận:");
             for (int i = 0; i < n; i++)
@@ -132,7 +138,7 @@ namespace Arrays_2
                 }
             }
         }
-        public static void TongMaTranVuong(int n,int[,] array,int tong)
+        public static void TongMaTranVuong(int n, int[,] array, int tong)
         {
             for (int i = 0; i < n; i++)
             {
@@ -145,17 +151,17 @@ namespace Arrays_2
         }
         public static void MaTranVuong()
         {
-            
+
             int tong = 0;
             Console.Write("Nhập n Phần Tử Vào Mảng:");
             int n = Convert.ToInt32(Console.ReadLine());
             int[,] array = new int[n, n];
-            NhapMaTranVuong(n,array);
-            XuatMaTranVuong(n,array);
-            TongMaTranVuong(n,array,tong);
+            NhapMaTranVuong(n, array);
+            XuatMaTranVuong(n, array);
+            TongMaTranVuong(n, array, tong);
             Console.ReadKey();
         }
-        public static void NhapMaTranThuong(int n,int m, int[,] array)
+        public static void NhapMaTranThuong(int n, int m, int[,] array)
         {
             Console.WriteLine("Nhập Các Phần Tử Vào Ma Trận:");
             for (int i = 0; i < n; i++)
@@ -167,7 +173,7 @@ namespace Arrays_2
                 }
             }
         }
-        public static void XuatMaTranThuong(int n,int m, int[,] array)
+        public static void XuatMaTranThuong(int n, int m, int[,] array)
         {
             Console.WriteLine("Xuất Ma Trận:");
             for (int i = 0; i < n; i++)
@@ -178,8 +184,9 @@ namespace Arrays_2
                     Console.Write("{0} ", array[i, j]);
                 }
             }
+            Console.WriteLine();
         }
-        public static void TongMaTranThuong(int n,int m, int[,] array, int tong)
+        public static void TongMaTranThuong(int n, int m, int[,] array, int tong)
         {
             for (int i = 0; i < n; i++)
             {
@@ -199,9 +206,9 @@ namespace Arrays_2
             Console.Write("Nhập m Là Chiều Rộng Ma Trận:");
             int m = Convert.ToInt32(Console.ReadLine());
             int[,] array = new int[n, m];
-            NhapMaTranThuong(n,m, array);
-            XuatMaTranThuong(n,m, array);
-            TongMaTranThuong(n,m, array, tong);
+            NhapMaTranThuong(n, m, array);
+            XuatMaTranThuong(n, m, array);
+            TongMaTranThuong(n, m, array, tong);
             Console.ReadKey();
         }
         public static void TongDuongCheoChinh()
@@ -229,21 +236,19 @@ namespace Arrays_2
         }
         public static void TongDuongCheoPhu()
         {
-            int p = 0;
             int tongduongcheophu = 0;
             Console.Write("Nhập n Là Chiều Dài Ma Trận:");
             int n = Convert.ToInt32(Console.ReadLine());
-            Console.Write("Nhập m Là Chiều Rộng Ma Trận:");
-            int m = Convert.ToInt32(Console.ReadLine());
-            int[,] array = new int[n, m];
+            int m = n;
+            int[,] array = new int[100, 100];
             NhapMaTranThuong(n, m, array);
             XuatMaTranThuong(n, m, array);
             for (int i = 0; i < n; i++)
             {
-                p = p - 1;
-                for (int j = 0; j < m; j++)
+                m = m - 1;
+                for (int j = 0; j < n; j++)
                 {
-                    if (j == p)
+                    if (j == m)
                     {
                         tongduongcheophu = tongduongcheophu + array[i, j];
                     }
@@ -252,9 +257,76 @@ namespace Arrays_2
             Console.WriteLine("Tổng Đường Chéo Phụ Của Ma Trận Là {0}", tongduongcheophu);
             Console.ReadKey();
         }
-        public static void TimGiaTriLonNhat()
+        public static void TimTongCacDongVaCacCotCuaMaTran()
         {
-            
+            int[] TongCot = new int[100];
+            int[] TongHang = new int[100];
+            Console.Write("Nhập n Là Chiều Dài Ma Trận:");
+            int n = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Nhập m Là Chiều Rộng Ma Trận:");
+            int m = Convert.ToInt32(Console.ReadLine());
+            int[,] array = new int[100, 100];
+            NhapMaTranThuong(n, m, array);
+            XuatMaTranThuong(n, m, array);
+            /* tinh tong cac hang */
+            for (int i = 0; i < n; i++)
+            {
+                TongHang[i] = 0;
+                for (int j = 0; j < n; j++)
+                {
+                    TongHang[i] = TongHang[i] + array[i, j];
+                }
+            }
+            /* tinh tong cac cot */
+            for (int i = 0; i < n; i++)
+            {
+                TongCot[i] = 0;
+                for (int j = 0; j < n; j++)
+                {
+                    TongCot[i] = TongCot[i] + array[j, i];
+                }
+            }
+
+            Console.Write("Tong cua cac hang va cac cot trong ma tran la:\n");
+            for (int i = 0; i < n; i++)
+            {
+                for (int j = 0; j < n; j++)
+                {
+                    Console.Write("{0}  ", array[i, j]);
+                }
+                Console.Write("{0}    ", TongHang[i]);
+                Console.WriteLine();
+            }
+            Console.WriteLine();
+            for (int j = 0; j < n; j++)
+            {
+                Console.Write("{0}   ", TongCot[j]);
+            }
+            Console.WriteLine();
+            Console.ReadKey();
+        }
+        public static void TimTongCacDong()
+        {
+            int[] TongHang = new int[100];
+            Console.Write("Nhập n Là Chiều Dài Ma Trận:");
+            int n = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Nhập m Là Chiều Rộng Ma Trận:");
+            int m = Convert.ToInt32(Console.ReadLine());
+            int[,] array = new int[100, 100];
+            NhapMaTranThuong(n, m, array);
+            XuatMaTranThuong(n, m, array);
+            for (int i = 0; i < n; i++)
+            {
+                TongHang[i] = 0;
+                for (int j = 0; j < n; j++)
+                {
+                    TongHang[i] = TongHang[i] + array[i, j];
+                }
+            }
+        }
+        public static void TimTongCacCot()
+        {
+            int[] TongCot = new int[10];
             Console.Write("Nhập n Là Chiều Dài Ma Trận:");
             int n = Convert.ToInt32(Console.ReadLine());
             Console.Write("Nhập m Là Chiều Rộng Ma Trận:");
@@ -262,11 +334,36 @@ namespace Arrays_2
             int[,] array = new int[n, m];
             NhapMaTranThuong(n, m, array);
             XuatMaTranThuong(n, m, array);
-            Console.WriteLine();
-            int max= array[0,0];
-            for (int i = 1; i < n; i++)
+            /* tinh tong cac cot */
+            for (int i = 0; i < n; i++)
             {
-                for (int j = 1; j < m; i++)
+                TongCot[i] = 0;
+                for (int j = 0; j < m; j++)
+                {
+                    TongCot[i] = TongCot[i] + array[j, i];
+                }
+            }
+
+            for (int j = 0; j < m; j++)
+            {
+                Console.Write("{0} ", TongCot[j]);
+            }
+            Console.WriteLine();
+        }
+        public static void TimGiaTriLonNhat()
+        {
+            Console.Write("Nhập n Là Chiều Dài Ma Trận:");
+            int n = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Nhập m Là Chiều Rộng Ma Trận:");
+            int m = Convert.ToInt32(Console.ReadLine());
+            int[,] array = new int[100, 100];
+            NhapMaTranThuong(n, m, array);
+            XuatMaTranThuong(n, m, array);
+            Console.WriteLine();
+            int max = array[0, 0];
+            for (int i = 0; i < n; i++)
+            {
+                for (int j = 0; j < m; i++)
                 {
                     if (max < array[i, j])
                     {
@@ -274,8 +371,7 @@ namespace Arrays_2
                     }
                 }
             }
-            
-            Console.WriteLine("Giá Trị Lớn Nhất Của Ma Trận Là : {0}", max);
+            Console.WriteLine("Dòng Có Giá Trị Lớn Nhất Của Ma Trận Là : {0}", max);
         }
         public static void TimGiaTriBeNhat()
         {
@@ -283,21 +379,22 @@ namespace Arrays_2
             int n = Convert.ToInt32(Console.ReadLine());
             Console.Write("Nhập m Là Chiều Rộng Ma Trận:");
             int m = Convert.ToInt32(Console.ReadLine());
-            int[,] array = new int[n, m];
+            int[,] array = new int[100, 100];
             NhapMaTranThuong(n, m, array);
             XuatMaTranThuong(n, m, array);
+            Console.WriteLine();
             int min = array[0, 0];
-            for (int i = 1; i < n; i++)
+            for (int i = 0; i < n; i++)
             {
-                for (int j = 1; j < m; i++)
+                for (int j = 0; j < m; i++)
                 {
-                    if (min > array[i, j])
+                    if (array[i, j] < min)
                     {
                         min = array[i, j];
                     }
                 }
             }
-            Console.WriteLine("Giá Trị Bé Nhất Của Ma Trận Là : {0}",min);
+            Console.WriteLine("Giá Trị Bé Nhất Của Ma Trận Là : {0}", min);
         }
     }
 
