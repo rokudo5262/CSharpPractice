@@ -396,6 +396,21 @@ namespace Arrays_2
             }
             Console.WriteLine("Giá Trị Bé Nhất Của Ma Trận Là : {0}", min);
         }
+        public static void XuatMaTranTamgiacTren()
+        {
+            Console.Write("Nhập n Là Chiều Dài Ma Trận:");
+            int n = Convert.ToInt32(Console.ReadLine());
+            int[,] array = new int[100, 100];
+            NhapMaTranVuong(n, array);
+            XuatMaTranVuong(n, array);
+        }
+        public static void XuatMaTranTamGiacDuoi()
+        {
+            Console.Write("Nhập n Là Chiều Dài Ma Trận:");
+            int n = Convert.ToInt32(Console.ReadLine());
+            int[,] array = new int[100, 100];
+            NhapMaTranVuong(n, array);
+            XuatMaTranVuong(n, array);
+        }
     }
-
 }
