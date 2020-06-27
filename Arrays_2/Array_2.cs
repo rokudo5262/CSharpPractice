@@ -363,7 +363,7 @@ namespace Arrays_2
             int max = array[0, 0];
             for (int i = 0; i < n; i++)
             {
-                for (int j = 0; j < m; i++)
+                for (int j = 0; j < m; j++)
                 {
                     if (max < array[i, j])
                     {
