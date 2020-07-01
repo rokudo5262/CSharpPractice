@@ -15,7 +15,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Arrays_2", "Arrays_2\Arrays
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "String", "String\String.csproj", "{486B34BE-460A-473A-A812-C795D58BFB18}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Recursive", "Recursive\Recursive.csproj", "{0DBA34E2-0BC2-4B74-B032-FFC01B20A5BA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Recursive", "Recursive\Recursive.csproj", "{0DBA34E2-0BC2-4B74-B032-FFC01B20A5BA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Struct", "Struct\Struct.csproj", "{3708BBB9-2A6F-4817-9067-E91CAF2676EA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Object Oriented", "Object Oriented\Object Oriented.csproj", "{B330EDED-056B-4B89-8CF4-A6A77B31DAF7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +55,14 @@ Global
 		{0DBA34E2-0BC2-4B74-B032-FFC01B20A5BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0DBA34E2-0BC2-4B74-B032-FFC01B20A5BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0DBA34E2-0BC2-4B74-B032-FFC01B20A5BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3708BBB9-2A6F-4817-9067-E91CAF2676EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3708BBB9-2A6F-4817-9067-E91CAF2676EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3708BBB9-2A6F-4817-9067-E91CAF2676EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3708BBB9-2A6F-4817-9067-E91CAF2676EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B330EDED-056B-4B89-8CF4-A6A77B31DAF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B330EDED-056B-4B89-8CF4-A6A77B31DAF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B330EDED-056B-4B89-8CF4-A6A77B31DAF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B330EDED-056B-4B89-8CF4-A6A77B31DAF7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
