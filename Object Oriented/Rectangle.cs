@@ -38,7 +38,7 @@ namespace Object_Oriented
             }
         }
         //Constructor không có tham số, khởi tạo các biến mang giá trị mặc định là 0
-        public Rectangle()
+        public  Rectangle()
         {
             height = 0;
             width = 0;
@@ -56,10 +56,6 @@ namespace Object_Oriented
         public override void CalculatePerimeter()
         {
             this.Perimeter = (height * 2) + (width * 2);
-        }
-        public static void EArea()
-        {
-            Console.WriteLine("Tuổi Của {0} Là: Tuổi.",area );
         }
     }
 }

@@ -109,8 +109,8 @@ namespace Object_Oriented
         }
         public static void HinhChuNhat()
         {
-            int chieudai;
-            int chieurong;
+            double chieudai;
+            double chieurong;
             do
             {
                 Console.Write("Nhập Vào Chiều Dài Hình Chữ Nhật:");
@@ -122,9 +122,12 @@ namespace Object_Oriented
                     Console.Write("Nhập Sai Vui Lòng Nhập Lại");
                 }
             } while (chieudai < chieurong && chieudai < 0 && chieurong < 0);
-            Rectangle hcn = new Rectangle(chieudai,chieurong);
+            Rectangle hcn = new Rectangle();
+            hcn.height = chieudai;
+            hcn.width = chieurong;
             hcn.CalculateArea();
             hcn.CalculatePerimeter();
+            Console.WriteLine("Diện Tích : {0}.", hcn.area);
         }
 
     }
