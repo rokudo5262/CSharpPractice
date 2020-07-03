@@ -20,11 +20,11 @@ namespace Object_Oriented
         }
         public override void CalculateArea()
         {
-            this.Area = radious;
+            this.Area = Math.PI*radious*radious;
         }
         public override void CalculatePerimeter()
         {
-            this.Perimeter = radious;
+            this.Perimeter = 2 * Math.PI * radious;
         }
     }
 }

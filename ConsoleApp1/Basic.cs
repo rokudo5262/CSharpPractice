@@ -295,20 +295,27 @@ namespace Basic
         }
         public static void HinhTamGiac()
         {
-            int canha;
-            Console.Write("Nhap Cạnh A Của Tam Giác:");
-            canha = Convert.ToInt32(Console.ReadLine());
-            int canhb;
-            Console.Write("Nhap Cạnh B Của Tam Giác:");
-            canhb = Convert.ToInt32(Console.ReadLine());
-            int canhc;
-            Console.Write("Nhap Cạnh C Của Tam Giác:");
-            canhc = Convert.ToInt32(Console.ReadLine());
-            int chuvihinhtamgiac = canha + canhb + canhc;
-            Console.WriteLine("Diê5n Tích Hình Tam Giác la :{0}", chuvihinhtamgiac);
+            double canha;
+            double canhb;
+            double canhc;
+            do
+            {
+                Console.Write("Nhap Cạnh A Của Tam Giác:");
+                canha = Convert.ToInt32(Console.ReadLine());
+                Console.Write("Nhap Cạnh B Của Tam Giác:");
+                canhb = Convert.ToInt32(Console.ReadLine());
+                Console.Write("Nhap Cạnh C Của Tam Giác:");
+                canhc = Convert.ToInt32(Console.ReadLine());
+                if (canha < 0 && canhb < 0 && canhc < 0)
+                {
+                    Console.Write("Nhập Sai Vui Lòng Nhập Lại");
+                }
+            } while (canha < 0 && canhb < 0 && canhc < 0);
+            double chuvihinhtamgiac = canha + canhb + canhc;
+            Console.WriteLine("Diện Tích Hình Tam Giác Là :{0}", chuvihinhtamgiac);
             Double p = (canha + canhb + canhc) / 2;
             double dientichhinhtamgiac = Math.Sqrt(p * (p - canha) * (p - canhb) * (p - canhc));
-            Console.WriteLine("Dien Tich Hinh Tam Giac la :{0}", dientichhinhtamgiac);
+            Console.WriteLine("Dien Tich Hinh Tam Giac Là :{0}", dientichhinhtamgiac);
             Console.ReadKey();
         }
         public static void HinhTron()

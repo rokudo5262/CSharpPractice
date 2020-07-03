@@ -38,11 +38,11 @@ namespace Object_Oriented
             }
         }
         //Constructor không có tham số, khởi tạo các biến mang giá trị mặc định là 0
-        public  Rectangle()
-        {
-            height = 0;
-            width = 0;
-        }
+        //public  Rectangle()
+       // {
+        //    height = 0;
+         //   width = 0;
+        //}
         //Contructor có tham số, khởi tạo biến mang giá trị truyền vào khi khởi tạo Constructor
         public Rectangle(double h, double w)
         {

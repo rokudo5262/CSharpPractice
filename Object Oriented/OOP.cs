@@ -13,8 +13,11 @@ namespace Object_Oriented
         public static void Menu()
         {
             Console.WriteLine("******************Menu**********************");
-            Console.WriteLine("*01. Teacher And Student                   *");
-            Console.WriteLine("*02. Rectangle                             *");
+            Console.WriteLine("*01. Teacher And Student.                  *");
+            Console.WriteLine("*02. Rectangle.                            *");
+            Console.WriteLine("*03. Square.                               *");
+            Console.WriteLine("*04. Circle.                               *");
+            Console.WriteLine("*04. Triangle.                             *");
             Console.WriteLine("*00. Thoát Chương Trình.                   *");
             Console.WriteLine("********************************************");
         }
@@ -42,9 +45,11 @@ namespace Object_Oriented
                     List();
                     break;
                 case 3:
+                    HinhVuong();
                     List();
                     break;
                 case 4:
+                    HinhTron();
                     List();
                     break;
                 case 5:
@@ -122,13 +127,75 @@ namespace Object_Oriented
                     Console.Write("Nhập Sai Vui Lòng Nhập Lại");
                 }
             } while (chieudai < chieurong && chieudai < 0 && chieurong < 0);
-            Rectangle hcn = new Rectangle();
-            hcn.height = chieudai;
-            hcn.width = chieurong;
+            Rectangle hcn = new Rectangle(chieudai,chieurong);
+            //hcn.height = chieudai;
+            //hcn.width = chieurong;
             hcn.CalculateArea();
             hcn.CalculatePerimeter();
-            Console.WriteLine("Diện Tích : {0}.", hcn.area);
+            Console.WriteLine("Diện Tích Hình Chữ Nhật: {0}.", hcn.area);
+            Console.WriteLine("Chu Vi Hình Chữ Nhật: {0}.", hcn.perimeter);
         }
-
+        public static void HinhVuong()
+        {
+            double canh;
+            do
+            {
+                Console.Write("Nhập Vào Cạnh Hình Vuông:");
+                canh = Convert.ToInt32(Console.ReadLine());
+                if (canh < 0)
+                {
+                    Console.Write("Nhập Sai Vui Lòng Nhập Lại");
+                }
+            } while (canh < 0);
+            Square hv = new Square();
+            hv.side = canh;
+            hv.CalculateArea();
+            hv.CalculatePerimeter();
+            Console.WriteLine("Diện Tích Hình Vuông: {0}.", hv.area);
+            Console.WriteLine("Chu Vi Hình Vuông: {0}.", hv.perimeter);
+        }
+        public static void HinhTron()
+        {
+            double bankinh;
+            do
+            {
+                Console.Write("Nhập Vào Bán Kính Hình Tròn:");
+                bankinh = Convert.ToInt32(Console.ReadLine());
+                if (bankinh < 0)
+                {
+                    Console.Write("Nhập Sai Vui Lòng Nhập Lại");
+                }
+            } while (bankinh < 0);
+            Circle ht = new Circle();
+            ht.radious = bankinh;
+            ht.CalculateArea();
+            ht.CalculatePerimeter();
+            Console.WriteLine("Diện Tích Hình Tròn: {0}.", ht.area);
+            Console.WriteLine("Chu Vi Hình Tròn: {0}.", ht.perimeter);
+        }
+        public static void HinhTamGiac()
+        {
+            double canha;
+            double canhb;
+            double canhc;
+            do
+            {
+                Console.Write("Nhap Cạnh A Của Tam Giác:");
+                canha = Convert.ToInt32(Console.ReadLine());
+                Console.Write("Nhap Cạnh B Của Tam Giác:");
+                canhb = Convert.ToInt32(Console.ReadLine());
+                Console.Write("Nhap Cạnh C Của Tam Giác:");
+                canhc = Convert.ToInt32(Console.ReadLine());
+                if (canha < 0 && canhb < 0 && canhc < 0)
+                {
+                    Console.Write("Nhập Sai Vui Lòng Nhập Lại");
+                }
+            } while (canha < 0 && canhb < 0 && canhc < 0);
+            Triangle htg = new Triangle();
+            htg.CalculatePerimeter();
+            htg.CalculateArea();
+            Console.WriteLine("Diện Tích Hình Tròn: {0}.", htg.area);
+            Console.WriteLine("Chu Vi Hình Tròn: {0}.", htg.perimeter);
+        }
     }
 }

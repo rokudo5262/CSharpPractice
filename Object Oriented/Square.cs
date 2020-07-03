@@ -18,6 +18,14 @@ namespace Object_Oriented
                 side = value;
             }
         }
+        public Square()
+        {
+            side = 0;
+        }
+        public Square(double s)
+        {
+            side = s;
+        }
         public override void CalculateArea()
         {
             this.Area = side*side;
