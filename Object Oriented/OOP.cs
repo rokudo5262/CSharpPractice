@@ -17,7 +17,8 @@ namespace Object_Oriented
             Console.WriteLine("*02. Rectangle.                            *");
             Console.WriteLine("*03. Square.                               *");
             Console.WriteLine("*04. Circle.                               *");
-            Console.WriteLine("*04. Triangle.                             *");
+            Console.WriteLine("*05. Triangle.                             *");
+            Console.WriteLine("*06. Bank Account.                         *");
             Console.WriteLine("*00. Thoát Chương Trình.                   *");
             Console.WriteLine("********************************************");
         }
@@ -53,9 +54,11 @@ namespace Object_Oriented
                     List();
                     break;
                 case 5:
+                    HinhTamGiac();
                     List();
                     break;
                 case 6:
+                    Bank();
                     List();
                     break;
                 case 7:
@@ -196,6 +199,22 @@ namespace Object_Oriented
             htg.CalculateArea();
             Console.WriteLine("Diện Tích Hình Tròn: {0}.", htg.area);
             Console.WriteLine("Chu Vi Hình Tròn: {0}.", htg.perimeter);
+        }
+        public static void Customer()
+        {
+            
+            Customer c = new Customer();
+            
+        }
+        public static void Bank()
+        {
+            Console.Write("Nhập Tên Người Dùng:");
+            string o = Console.ReadLine();
+            Console.Write("Nhập Số Tiền Tài Khoản:");
+            decimal b = Convert.ToInt32(Console.ReadLine());            
+            var account = new BackAccount(o,b);
+            Console.WriteLine("Account {0} was created for {1} with {2} $",account.Number,account.OwnerName,account.Balance);
+            account.MakeWithdrawal(120, DateTime.Now, "Hammer");
         }
     }
 }
