@@ -4,57 +4,45 @@ using System.Text;
 
 namespace Object_Oriented
 {
-    class Fraction
+    public class Fraction
     {
-        public double numerator;
-        public double Numerator
-        {
-            get
-            {
-                return numerator;
-            }
-            set
-            {
-                numerator = value;
-            }
-        }
-        public double denominator;
-        public double Denominator
-        {
-            get
-            {
-                return denominator;
-            }
-            set
-            {
-                denominator = value;
-            }
-        }
+        public double Numerator { get; set; }
+        public double Denominator { get; set; }
         public void SetFraction(double n,double d)
         {
+            Numerator = n;
+            Denominator = d;
+        }
+        public void Nhap()
+        {
             Console.Write("Nhập Vào Tử Số:");
-            n = Convert.ToInt32(Console.ReadLine());
+            Numerator = Convert.ToInt32(Console.ReadLine());
             Console.Write("Nhập Vào Mẩu Số:");
-            d = Convert.ToInt32(Console.ReadLine());
-            numerator = n;
-            denominator = d;
+            Denominator = Convert.ToInt32(Console.ReadLine());
         }
-        public static void cong()
+        public void Xuat()
         {
-            
+            Console.WriteLine("{0}/{1}",Numerator,Denominator);
         }
-        public static void tru()
+        public void cong(Fraction f)
         {
-
+            Numerator = Numerator * f.Denominator + Denominator * f.Numerator;
+            Denominator = Denominator * f.Denominator;
         }
-        public static void nhan()
+        public void tru(Fraction f)
         {
-
+            Numerator = Numerator * f.Denominator - Denominator * f.Numerator;
+            Denominator = Denominator * f.Denominator;
         }
-        public static void chia()
+        public void nhan(Fraction f)
         {
-
+            Numerator = Numerator * f.Numerator;
+            Denominator = Denominator * f.Denominator;
         }
-
+        public void chia(Fraction f)
+        {
+            Numerator = Numerator * f.Denominator;
+            Denominator = Denominator * f.Numerator;
+        }
     }
 }

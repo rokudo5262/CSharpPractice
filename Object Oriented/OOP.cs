@@ -12,15 +12,19 @@ namespace Object_Oriented
         }
         public static void Menu()
         {
-            Console.WriteLine("******************Menu**********************");
-            Console.WriteLine("*01. Teacher And Student.                  *");
-            Console.WriteLine("*02. Rectangle.                            *");
-            Console.WriteLine("*03. Square.                               *");
-            Console.WriteLine("*04. Circle.                               *");
-            Console.WriteLine("*05. Triangle.                             *");
-            Console.WriteLine("*06. Bank Account.                         *");
-            Console.WriteLine("*00. Thoát Chương Trình.                   *");
-            Console.WriteLine("********************************************");
+            Console.WriteLine("******Menu**********************");
+            Console.WriteLine("*01. Teacher.                  *");
+            Console.WriteLine("*02. Student.                  *");
+            Console.WriteLine("*03. Rectangle.                *");
+            Console.WriteLine("*04. Square.                   *");
+            Console.WriteLine("*05. Circle.                   *");
+            Console.WriteLine("*06. Triangle.                 *");
+            Console.WriteLine("*07. Bank Account.             *");
+            Console.WriteLine("*08. Bank Account.             *");
+            Console.WriteLine("*09. Customer.                 *");
+            Console.WriteLine("*10. Fraction.                 *");
+            Console.WriteLine("*00. Thoát Chương Trình.       *");
+            Console.WriteLine("********************************");
         }
         public static void List()
         {
@@ -38,39 +42,43 @@ namespace Object_Oriented
             switch (Selectfuntion)
             {
                 case 1:
-                    TeacherAndStudent();
+                    Teacher();
                     List();
                     break;
                 case 2:
-                    HinhChuNhat();
+                    Student();
                     List();
                     break;
                 case 3:
-                    HinhVuong();
+                    HinhChuNhat();
                     List();
                     break;
                 case 4:
-                    HinhTron();
+                    HinhVuong();
                     List();
                     break;
                 case 5:
-                    HinhTamGiac();
+                    HinhTron();
                     List();
                     break;
                 case 6:
-                    Bank();
+                    HinhTamGiac();
                     List();
                     break;
                 case 7:
+                    Bank();
                     List();
                     break;
                 case 8:
+                    
                     List();
                     break;
                 case 9:
+                    Customer();
                     List();
                     break;
                 case 10:
+                    Fraction();
                     List();
                     break;
                 case 11:
@@ -82,14 +90,45 @@ namespace Object_Oriented
                 case 13:
                     List();
                     break;
+                case 14:
+                    List();
+                    break;
                 default:
                     Console.Write("Thoát Chương Trình.");
                     Console.ReadKey();
                     break;
             }
         }
-        public static void TeacherAndStudent()
+        public static void Teacher()
         {
+            Console.Write("Nhập Tên Giáo Viên:");
+            string gv = Console.ReadLine();
+            Console.Write("Nhập Tuổi Giáo Viên:");
+            int a = Convert.ToInt32(Console.ReadLine());
+            bool debug = false;
+            Person myPerson = new Person(); //day la constructor mac dinh
+            myPerson.LoiChao();
+            /*tao mot doi tuong Teacher, thiet lap tuoi cho giang vien nay la 30, 
+             *de nghi anh ta chao va bat dau giang day*/
+            Teacher myTeacher = new Teacher(); //day la constructor mac dinh
+            myTeacher.SetAge(a);
+            myTeacher.SetChucVu(gv);
+            myTeacher.ThongBaoTuoi();
+            myTeacher.SetMonHoc("Ngữ Văn");
+            myTeacher.LoiChao();
+            myTeacher.GiangDay();
+            if (debug)
+            {
+                Console.ReadLine();
+            }
+            Console.ReadKey();
+        }
+        public static void Student()
+        {
+            Console.Write("Nhập Tên Học Sinh:");
+            string gv = Console.ReadLine();
+            Console.Write("Nhập Tuổi Học Sinh:");
+            int a = Convert.ToInt32(Console.ReadLine());
             bool debug = false;
             Person myPerson = new Person(); //day la constructor mac dinh
             myPerson.LoiChao();
@@ -100,15 +139,6 @@ namespace Object_Oriented
             myStudent.SetChucVu("Học Sinh");
             myStudent.LoiChao();
             myStudent.ThongBaoTuoi();
-            /*tao mot doi tuong Teacher, thiet lap tuoi cho giang vien nay la 30, 
-             *de nghi anh ta chao va bat dau giang day*/
-            Teacher myTeacher = new Teacher(); //day la constructor mac dinh
-            myTeacher.SetAge(30);
-            myTeacher.SetChucVu("Giáo Viên");
-            myTeacher.ThongBaoTuoi();
-            myTeacher.SetMonHoc("Ngữ Văn");
-            myTeacher.LoiChao();
-            myTeacher.GiangDay();
             if (debug)
             {
                 Console.ReadLine();
@@ -202,8 +232,26 @@ namespace Object_Oriented
         }
         public static void Customer()
         {
-            
-            Customer c = new Customer();
+            string e;
+            string p;
+            string f;
+            string l;
+            string a;
+            string c;
+            Console.Write("Nhập Email:");
+            e = Console.ReadLine();
+            Console.Write("Nhập Password:");
+            p = Console.ReadLine();
+            Console.Write("Nhập Tên:");
+            f = Console.ReadLine();
+            Console.Write("Nhập Họ:");
+            l = Console.ReadLine();
+            Console.Write("Nhập Địa Chỉ:");
+            a = Console.ReadLine();
+            Console.Write("Nhập Công Ty:");
+            c = Console.ReadLine();
+            Customer customer = new Customer(e, p, f, a, l, c);
+            customer.CustomerDetail();
             
         }
         public static void Bank()
@@ -215,6 +263,30 @@ namespace Object_Oriented
             var account = new BackAccount(o,b);
             Console.WriteLine("Account {0} was created for {1} with {2} $",account.Number,account.OwnerName,account.Balance);
             account.MakeWithdrawal(120, DateTime.Now, "Hammer");
+        }
+        public static void GetAccountHistory()
+        {
+            
+        }
+        public static void Fraction()
+        {
+            Fraction a=new Fraction();
+            Fraction b= new Fraction();
+            a.Nhap();
+            b.Nhap();
+            Console.Write("Cộng Phân Số:");
+            
+            a.cong(b);
+            a.Xuat();
+            Console.Write("Trừ Phân Số:");
+            a.tru(b);
+            a.Xuat();
+            Console.Write("Nhân Phân Số:");
+            a.nhan(b);
+            a.Xuat();
+            Console.Write("Chia Phân Số:");
+            a.chia(b);
+            a.Xuat();
         }
     }
 }

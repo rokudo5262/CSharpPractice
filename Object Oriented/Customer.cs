@@ -6,118 +6,115 @@ namespace Object_Oriented
 {
     class Customer:Person
     {
-        public int customerId;
-        public int CustomerId
+        public string CustomerId
         {
             get
             {
-                return customerId;
+                return CustomerId;
             }
             set
             {
-                customerId = value;
+                CustomerId = value;
             }
         }
-        public string email;
         public string Email
         {
             get
             {
-                return email;
+                return Email;
             }
             set
             {
-                email = value;
+                Email = value;
             }
         }
-        public string password;
         public string Password
         {
             get
             {
-                return password;
+                return Password;
             }
             set
             {
-                password = value;
+                Password = value;
             }
         }
-        public string firstName;
         public string FirstName
         {
             get
             {
-                return firstName;
+                return FirstName;
             }
             set
             {
-                firstName = value;
+                FirstName = value;
             }
         }
-        public string lastName;
         public string LastName
         {
             get
             {
-                return lastName;
+                return LastName;
             }
             set
             {
-                lastName = value;
+                LastName = value;
             }
         }
-        public string address;
         public string Address
         {
             get
             {
-                return address;
+                return Address;
             }
             set
             {
-                address = value;
+                Address = value;
             }
         }
-        public string company;
         public string Company
         {
             get
             {
-                return company;
+                return Company;
             }
             set
             {
-                company = value;
+                Company = value;
             }
         }
+
+        private static int customerIdSeed = 1;
         public Customer()
         {
-            customerId = 0;
-            email = "0";
-            password = "0";
-            firstName = "0";
-            lastName = "0";
-            address = "0";
-            company = "0";
+            CustomerId = customerIdSeed.ToString();
+            customerIdSeed++;
+            Email = "0";
+            Password = "0";
+            FirstName = "0";
+            LastName = "0";
+            Address = "0";
+            Company = "0";
         }
-        public Customer(int id, string e, string p, string f, string a, string l,string c)
+        public Customer(string e, string p, string f, string a, string l,string c)
         {
-            customerId = id;
-            email = e;
-            password = p;
-            firstName = f;
-            lastName = l;
-            address = a;
-            company = c;
+            CustomerId = customerIdSeed.ToString();
+            customerIdSeed++;
+            Email = e;
+            Password = p;
+            FirstName = f;
+            LastName = l;
+            Address = a;
+            Company = c;
         }
-
-        public static void AddCustomer(int id, string e, string p, string f, string a, string l, string c)
+        public void CustomerDetail()
         {
-            
-        }
-        public static void CustomerDetail()
-        {
-
+            Console.WriteLine("Tên Khách Hàng: {0}.",FirstName);
+            Console.WriteLine("Họ Khách Hàng: {0}.",LastName);
+            Console.WriteLine("Tài Khoản Khách Hàng: {0}.",Email);
+            Console.WriteLine("Mật Khẩu Hàng: {0}.",Password);
+            Console.WriteLine("Địa Chỉ Khách Hàng: {0}.",Address);
+            Console.WriteLine("Tên Công Ty: {0}.",Company);
         }
     }
 }
