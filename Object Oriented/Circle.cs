@@ -6,25 +6,14 @@ namespace Object_Oriented
 {
     class Circle:Shape
     {
-        public double radious;
-        public double Radious
-        {
-            get
-            {
-                return radious;
-            }
-            set
-            {
-                radious = value;
-            }
-        }
+        public double Radious { get; set; }
         public override void CalculateArea()
         {
-            this.Area = Math.PI*radious*radious;
+            this.Area = Math.PI*Radious*Radious;
         }
         public override void CalculatePerimeter()
         {
-            this.Perimeter = 2 * Math.PI * radious;
+            this.Perimeter = 2 * Math.PI * Radious;
         }
     }
 }

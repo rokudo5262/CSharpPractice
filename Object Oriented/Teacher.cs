@@ -6,29 +6,18 @@ namespace Object_Oriented
 {
     class Teacher : Person
     {
-        public string mon_hoc;
-        public string MonHoc
-        {
-            get
-            {
-                return mon_hoc;
-            }
-            set
-            {
-                mon_hoc = value;
-            }
-        }
+        public string MonHoc { get; set; }
         public void SetMonHoc(string n)
         {
-            mon_hoc = n;
+            MonHoc = n;
         }
         public void ThongBaoTuoi()
         {
-            Console.WriteLine("Tuổi Của {0} Là: {1} Tuổi.",chuc_vu, age);
+            Console.WriteLine("Tuổi Của {0} Là: {1} Tuổi.",ChucVu, Age);
         }
         public void GiangDay()
         {
-            Console.WriteLine("Bắt Đầu Giảng Dạy Môn {0}.",mon_hoc);
+            Console.WriteLine("Bắt Đầu Giảng Dạy Môn {0}.", MonHoc);
         }
     }
 }

@@ -8,7 +8,7 @@ namespace Object_Oriented
     {
         public void ThongBaoTuoi()
         {
-            Console.WriteLine("Tuổi Của {0} Là: {1} Tuổi",chuc_vu, age);
+            Console.WriteLine("Tuổi Của {0} Là: {1} Tuổi",ChucVu, Age);
         }
     }
 }

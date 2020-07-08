@@ -13,7 +13,7 @@ namespace Object_Oriented
         public decimal Balance {
             get
             {
-                decimal Balance= 0;
+                decimal Balance = 0;
                 foreach (var item in allTransactions)
                 {
                     Balance += item.Amount;
@@ -21,10 +21,10 @@ namespace Object_Oriented
                 return Balance;
             }
         }
-        private List<Transaction>allTransactions = new List<Transaction>();
+        private List<Transaction> allTransactions = new List<Transaction>();
 
         private static int accountNumberSeed = 0000000001;
-        public BackAccount(string o,decimal b)
+        public BackAccount(string o, decimal b)
         {
             Number = accountNumberSeed.ToString();
             accountNumberSeed++;
@@ -48,10 +48,22 @@ namespace Object_Oriented
             }
             if (Balance - a < 0)
             {
-                throw new ArgumentOutOfRangeException(nameof(a), "Not sufficient for this withdrawal");
+                throw new ArgumentOutOfRangeException(nameof(a), "Not sufficient funds for this withdrawal");
             }
             var withdrawal = new Transaction(-a, d, n);
             allTransactions.Add(withdrawal);
+        }
+        public string GetAccountHistory()
+        {
+            var report = new StringBuilder();
+            //Header
+            report.AppendLine("Date\t\tAmount\tNote");
+            foreach (var item in allTransactions)
+            {
+                //report.AppendLine("{0}\t\t{1}\t{2}", item.Date.ToShortDateString(), item.Amount, item.Notes);
+                report.AppendLine($"{item.Date.ToShortDateString()}{item.Amount}{ item.Notes}");
+            }
+            return report.ToString();
         }
     }
 }

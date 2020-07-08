@@ -20,9 +20,10 @@ namespace Object_Oriented
             Console.WriteLine("*05. Circle.                   *");
             Console.WriteLine("*06. Triangle.                 *");
             Console.WriteLine("*07. Bank Account.             *");
-            Console.WriteLine("*08. Bank Account.             *");
-            Console.WriteLine("*09. Customer.                 *");
-            Console.WriteLine("*10. Fraction.                 *");
+            Console.WriteLine("*08. Deposist.                 *");
+            Console.WriteLine("*09. Withdrawal.               *");           
+            Console.WriteLine("*10. Customer.                 *");
+            Console.WriteLine("*11. Fraction.                 *");
             Console.WriteLine("*00. Thoát Chương Trình.       *");
             Console.WriteLine("********************************");
         }
@@ -70,18 +71,19 @@ namespace Object_Oriented
                     List();
                     break;
                 case 8:
-                    
+                    Deposist();
                     List();
                     break;
                 case 9:
-                    Customer();
+                    Withdrawal();
                     List();
                     break;
                 case 10:
-                    Fraction();
+                    Customer();
                     List();
                     break;
                 case 11:
+                    Fraction();
                     List();
                     break;
                 case 12:
@@ -91,6 +93,9 @@ namespace Object_Oriented
                     List();
                     break;
                 case 14:
+                    List();
+                    break;
+                case 15:
                     List();
                     break;
                 default:
@@ -200,7 +205,7 @@ namespace Object_Oriented
                 }
             } while (bankinh < 0);
             Circle ht = new Circle();
-            ht.radious = bankinh;
+            ht.Radious = bankinh;
             ht.CalculateArea();
             ht.CalculatePerimeter();
             Console.WriteLine("Diện Tích Hình Tròn: {0}.", ht.area);
@@ -235,6 +240,7 @@ namespace Object_Oriented
             string e;
             string p;
             string f;
+            string m;
             string l;
             string a;
             string c;
@@ -244,13 +250,15 @@ namespace Object_Oriented
             p = Console.ReadLine();
             Console.Write("Nhập Tên:");
             f = Console.ReadLine();
+            Console.Write("Nhập Tên Đệm:");
+            m = Console.ReadLine();
             Console.Write("Nhập Họ:");
             l = Console.ReadLine();
             Console.Write("Nhập Địa Chỉ:");
             a = Console.ReadLine();
             Console.Write("Nhập Công Ty:");
             c = Console.ReadLine();
-            Customer customer = new Customer(e, p, f, a, l, c);
+            Customer customer = new Customer(e, p, f, m, l,a, c);
             customer.CustomerDetail();
             
         }
@@ -261,21 +269,33 @@ namespace Object_Oriented
             Console.Write("Nhập Số Tiền Tài Khoản:");
             decimal b = Convert.ToInt32(Console.ReadLine());            
             var account = new BackAccount(o,b);
-            Console.WriteLine("Account {0} was created for {1} with {2} $",account.Number,account.OwnerName,account.Balance);
-            account.MakeWithdrawal(120, DateTime.Now, "Hammer");
+            Console.WriteLine("Account {0} was created for {1} with {2} $.",account.Number,account.OwnerName,account.Balance);
+            account.MakeDeposist(120, DateTime.Now, "Hammer");
+            account.MakeDeposist(140, DateTime.Now, "Shover");
+            account.MakeDeposist(160, DateTime.Now, "Hammer");
+            Console.WriteLine(account.GetAccountHistory());
         }
-        public static void GetAccountHistory()
+        public static void Deposist()
         {
-            
+            var account = new BackAccount("Truong", 10000);
+            Console.WriteLine("Account {0} was created for {1} with {2} $.", account.Number, account.OwnerName, account.Balance);
+            account.MakeDeposist(120, DateTime.Now, "Hammer");
+            Console.WriteLine("Account {0} Make Deposist, Balance: {1} $",account.Number, account.Balance);
+        }
+        public static void Withdrawal()
+        {
+            var account = new BackAccount("Truong", 10000);
+            Console.WriteLine("Account {0} was created for {1} with {2} $.", account.Number, account.OwnerName, account.Balance);
+            account.MakeWithdrawal(120, DateTime.Now, "Lost Money");
+            Console.WriteLine("Account {0} Make Withdrawal, Balance: {1} $", account.Number, account.Balance);
         }
         public static void Fraction()
         {
-            Fraction a=new Fraction();
+            Fraction a = new Fraction();
             Fraction b= new Fraction();
             a.Nhap();
             b.Nhap();
             Console.Write("Cộng Phân Số:");
-            
             a.cong(b);
             a.Xuat();
             Console.Write("Trừ Phân Số:");

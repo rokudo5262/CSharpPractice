@@ -6,83 +6,14 @@ namespace Object_Oriented
 {
     class Customer:Person
     {
-        public string CustomerId
-        {
-            get
-            {
-                return CustomerId;
-            }
-            set
-            {
-                CustomerId = value;
-            }
-        }
-        public string Email
-        {
-            get
-            {
-                return Email;
-            }
-            set
-            {
-                Email = value;
-            }
-        }
-        public string Password
-        {
-            get
-            {
-                return Password;
-            }
-            set
-            {
-                Password = value;
-            }
-        }
-        public string FirstName
-        {
-            get
-            {
-                return FirstName;
-            }
-            set
-            {
-                FirstName = value;
-            }
-        }
-        public string LastName
-        {
-            get
-            {
-                return LastName;
-            }
-            set
-            {
-                LastName = value;
-            }
-        }
-        public string Address
-        {
-            get
-            {
-                return Address;
-            }
-            set
-            {
-                Address = value;
-            }
-        }
-        public string Company
-        {
-            get
-            {
-                return Company;
-            }
-            set
-            {
-                Company = value;
-            }
-        }
+        public string CustomerId { get; }
+        public string Email { get; set; }
+        public string Password { get; set; }
+        public string FirstName { get; set; }
+        public string MiddleName { get; set; }
+        public string LastName { get; set; }
+        public string Address { get; set; }
+        public string Company { get; set; }
 
         private static int customerIdSeed = 1;
         public Customer()
@@ -92,17 +23,19 @@ namespace Object_Oriented
             Email = "0";
             Password = "0";
             FirstName = "0";
+            MiddleName = "0";
             LastName = "0";
             Address = "0";
             Company = "0";
         }
-        public Customer(string e, string p, string f, string a, string l,string c)
+        public Customer(string e, string p, string f, string m,string l, string a,string c)
         {
             CustomerId = customerIdSeed.ToString();
             customerIdSeed++;
             Email = e;
             Password = p;
             FirstName = f;
+            MiddleName = m;
             LastName = l;
             Address = a;
             Company = c;
